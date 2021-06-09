@@ -1,17 +1,17 @@
-import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle } from '@ionic/react';
+import { IonHeader, IonToolbar, IonButtons, IonMenuButton } from '@ionic/react';
 
-import { useParams } from 'react-router';
+// import { useParams } from 'react-router';
 
 const Header = () => {
 
-    const { name } = useParams < { name: string, } > ();
+
 
     <IonHeader>
         <IonToolbar>
             <IonButtons slot="start">
                 <IonMenuButton />
             </IonButtons>
-            <IonTitle>Name's {name}</IonTitle>
+            {/* <IonTitle>Name's {name}</IonTitle> */}
         </IonToolbar>
     </IonHeader>
 
