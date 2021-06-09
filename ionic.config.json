@@ -1,0 +1,8 @@
+{
+  "name": "Compliance",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "89b9cfd5"
+}
