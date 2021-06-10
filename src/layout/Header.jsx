@@ -1,19 +1,20 @@
-import { IonHeader, IonToolbar, IonButtons, IonMenuButton } from '@ionic/react';
+import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle } from '@ionic/react';
 
 // import { useParams } from 'react-router';
 
 const Header = () => {
 
+    return (
 
-
-    <IonHeader>
-        <IonToolbar>
-            <IonButtons slot="start">
-                <IonMenuButton />
-            </IonButtons>
-            {/* <IonTitle>Name's {name}</IonTitle> */}
-        </IonToolbar>
-    </IonHeader>
+        <IonHeader>
+            <IonToolbar>
+                <IonButtons slot="start">
+                    <IonMenuButton />
+                </IonButtons>
+                <IonTitle>Name's </IonTitle>
+            </IonToolbar>
+        </IonHeader>
+    );
 
 };
 
