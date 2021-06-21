@@ -1,0 +1,7 @@
+@use 'colors'as *;
+@use 'variables'as *;
+@use '../components/Menu'as *;
+
+.landingText {
+    color: color(primary);
+}

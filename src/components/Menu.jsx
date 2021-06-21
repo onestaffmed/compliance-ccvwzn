@@ -18,9 +18,9 @@ const Menu = () => {
 
     return (
 
-        <IonMenu contentId="main-content">
+        <IonMenu contentId="main-content" className="menuBackground">
             <IonHeader>
-                <IonToolbar color="primary">
+                <IonToolbar >
                     <IonTitle>Menu</IonTitle>
                 </IonToolbar>
             </IonHeader>
@@ -31,31 +31,31 @@ const Menu = () => {
 
                     <IonListHeader>
                         Navigate
-          </IonListHeader>
+                    </IonListHeader>
                     <IonMenuToggle autoHide={false}>
                         <IonItem button href="/">
                             <IonIcon slot="start" icon={home}></IonIcon>
                             <IonLabel>
                                 Home
-              </IonLabel>
+                            </IonLabel>
                         </IonItem>
                         <IonItem button href="/profile">
                             <IonIcon slot="start" icon={home}></IonIcon>
                             <IonLabel>
                                 Profile
-              </IonLabel>
+                            </IonLabel>
                         </IonItem>
                         <IonItem button >
                             <IonIcon slot="start" icon={home}></IonIcon>
                             <IonLabel>
                                 Home
-              </IonLabel>
+                            </IonLabel>
                         </IonItem>
                         <IonItem button>
                             <IonIcon slot="start" icon={home}></IonIcon>
                             <IonLabel>
                                 Home
-              </IonLabel>
+                            </IonLabel>
                         </IonItem>
                     </IonMenuToggle>
                 </IonList>

@@ -12,7 +12,7 @@ import {
 
 import { useLocation } from 'react-router-dom';
 import { archiveOutline, archiveSharp, heartOutline, heartSharp, personCircleOutline, home, homeSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
-import './Menu.css';
+
 
 interface AppPage {
   url: string;
@@ -70,9 +70,9 @@ const Menu = () => {
   const location = useLocation();
 
   return (
-    <IonMenu contentId="main" type="reveal">
-      <IonContent>
-        <IonList id="inbox-list">
+    <IonMenu contentId="main" type="reveal" className="menuBackground" >
+      <IonContent >
+        <IonList id="inbox-list" className="menubar">
           <IonListHeader>Welcome Traveler!</IonListHeader>
           <IonNote>hi@ionicframework.com</IonNote>
           {appPages.map((appPage, index) => {
