@@ -1,7 +1,7 @@
 import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
-import Menu from './components/Menu';
+import Menu from './components/menu';
 // import Profile from './pages/profile';
 import Home from './pages/Home.jsx';
 import Profile from './pages/profile.jsx';
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <IonApp>
       <IonReactRouter>
-        <IonSplitPane when="md" contentId="main">
+        <IonSplitPane when="md" contentId="main" >
           <Menu />
           <IonRouterOutlet id="main">
             <Header />

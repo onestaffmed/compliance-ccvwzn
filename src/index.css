@@ -3,12 +3,12 @@ http://ionicframework.com/docs/theming/ */
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #5260ff;
+  --ion-color-primary: #1abc9c;
   --ion-color-primary-rgb: 82, 96, 255;
-  --ion-color-primary-contrast: #000;
+  --ion-color-primary-contrast: #fff;
   --ion-color-primary-contrast-rgb: 0, 0, 0;
-  --ion-color-primary-shade: #4854e0;
-  --ion-color-primary-tint: #6370ff;
+  --ion-color-primary-shade: #17a589;
+  --ion-color-primary-tint: #31c3a6;
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
   --ion-color-secondary-rgb: 61, 194, 255;
@@ -70,10 +70,6 @@ http://ionicframework.com/docs/theming/ */
 /* ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 } */
-.menuBackground {
-  background-color: #1abc9c !important;
-}
-
 ion-menu.md ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
@@ -126,7 +122,7 @@ ion-menu.md ion-item.selected ion-icon {
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #fff;
+  color: secondary;
 }
 
 ion-menu.md ion-item ion-label {
@@ -183,9 +179,5 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
-}
-
-.landingText {
-  color: #1abc9c;
 }
 /*# sourceMappingURL=index.css.map */

@@ -7,7 +7,7 @@ const Header = () => {
     return (
 
         <IonHeader>
-            <IonToolbar>
+            <IonToolbar color="primary">
                 <IonButtons slot="start">
                     <IonMenuButton />
                 </IonButtons>

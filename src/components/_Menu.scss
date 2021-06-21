@@ -3,9 +3,7 @@
 /* ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 } */
-.menuBackground {
-  background-color: color(primary) !important;
-}
+
 
 ion-menu.md ion-content {
   --padding-start: 8px;
@@ -60,7 +58,7 @@ ion-menu.md ion-item.selected ion-icon {
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #fff;
+  color: secondary;
 }
 
 ion-menu.md ion-item ion-label {

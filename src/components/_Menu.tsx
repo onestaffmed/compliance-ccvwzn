@@ -70,16 +70,17 @@ const Menu = () => {
   const location = useLocation();
 
   return (
-    <IonMenu contentId="main" type="reveal" className="menuBackground" >
-      <IonContent >
-        <IonList id="inbox-list" className="menubar">
-          <IonListHeader>Welcome Traveler!</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+
+    <IonMenu contentId="main" type="reveal" color="primary" >
+      <IonContent color="primary" >
+        <IonList id="inbox-list" className="menubar" color="primary" >
+          <IonListHeader color="primary"  >Welcome Traveler!</IonListHeader>
+          <IonNote color="primary" >hi@ionicframework.com</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
 
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
+                <IonItem color="primary" className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                   <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>
@@ -91,6 +92,7 @@ const Menu = () => {
 
       </IonContent>
     </IonMenu>
+
   );
 };
 
