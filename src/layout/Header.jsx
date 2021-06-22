@@ -7,7 +7,7 @@ const Header = () => {
     return (
 
         <IonHeader>
-            <IonToolbar color="primary">
+            <IonToolbar color="tertiary">
                 <IonButtons slot="start">
                     <IonMenuButton />
                 </IonButtons>
@@ -19,3 +19,4 @@ const Header = () => {
 };
 
 export default Header;
+

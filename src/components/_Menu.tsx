@@ -71,10 +71,10 @@ const Menu = () => {
 
   return (
 
-    <IonMenu contentId="main" type="reveal" color="primary" >
-      <IonContent color="primary" >
-        <IonList id="inbox-list" className="menubar" color="primary" >
-          <IonListHeader color="primary"  >Welcome Traveler!</IonListHeader>
+    <IonMenu contentId="main" type="reveal" >
+      <IonContent >
+        <IonList id="inbox-list" className="menubar" >
+          <IonListHeader   >Welcome Traveler!</IonListHeader>
           <IonNote color="primary" >hi@ionicframework.com</IonNote>
           {appPages.map((appPage, index) => {
             return (

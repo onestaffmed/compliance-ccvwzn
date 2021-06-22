@@ -66,21 +66,25 @@ var appPages = [
 export const Menu = () => {
     const location = useLocation();
 
+    const styles = {
+        bkground: 'menuBackground',
+
+    }
     return (
         <>
-            <IonMenu contentId="main" type="reveal" color="primary">
+            <IonMenu contentId="main" type="reveal">
                 <IonHeader >
-                    <IonToolbar color="primary">
+                    {/* <IonToolbar >
                         <IonTitle>Welcome Traveler!</IonTitle>
-                    </IonToolbar>
+                    </IonToolbar> */}
                 </IonHeader>
-                <IonContent>
-                    <IonList>
+                <IonContent className={styles.bkground}>
+                    <IonList className={styles.bkground}>
                         {appPages.map((appPage, index) => {
                             return (
                                 <IonMenuToggle key={index} autoHide={false}>
 
-                                    <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
+                                    <IonItem className={`${styles.bkground} ${location.pathname === appPage.url ? 'selected' : ''}`} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                                         <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                                         <IonLabel>{appPage.title}</IonLabel>
                                     </IonItem>

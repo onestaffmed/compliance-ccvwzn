@@ -4,6 +4,13 @@
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 } */
 
+.menuBackground {
+  --background: var(--ion-color-secondary);
+}
+
+.list-md {
+  background: var(--ion-item-background, var(--ion-background-color)) !important;
+}
 
 ion-menu.md ion-content {
   --padding-start: 8px;
@@ -54,7 +61,7 @@ ion-menu.md ion-item.selected {
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: #fff;
 }
 
 ion-menu.md ion-item ion-icon {
@@ -114,5 +121,5 @@ ion-note {
 }
 
 ion-item.selected {
-  --color: var(--ion-color-primary);
+  --color: #fff;
 }

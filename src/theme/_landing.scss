@@ -1,0 +1,32 @@
+@use 'colors'as *;
+@use 'variables'as *;
+
+.heroMain {
+    height: 200px;
+}
+
+.heroCards {
+    display: flex;
+    flex-direction: row;
+}
+
+.landingText {
+    color: white;
+    font-weight: 600;
+}
+
+.cardOne {
+    --background: var(--ion-color-primary-tint);
+    --color: white;
+}
+
+.cardTwo {
+    --background: var(--ion-color-secondary);
+    --color: white;
+}
+
+.headerImage {
+    --background: orange !important;
+    height: 100px;
+    padding: 10px;
+}
