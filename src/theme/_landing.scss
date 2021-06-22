@@ -30,3 +30,17 @@
     height: 100px;
     padding: 10px;
 }
+
+.mainToolbar {
+    --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+}
+
+ion-title {
+    color: white;
+}
+
+.logoHere {
+    height: 80px;
+    float: right;
+    width: 20%;
+}

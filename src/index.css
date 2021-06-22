@@ -107,15 +107,28 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-tint: var(--ion-color-primary-tint);
 }
 
+:host {
+  --side-max-width: 20% !important;
+}
+
 /* ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 } */
 .menuBackground {
-  --background: var(--ion-color-secondary);
+  --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+}
+
+.itemBackground {
+  --background: transparent;
 }
 
 .list-md {
-  background: var(--ion-item-background, var(--ion-background-color)) !important;
+  --background: none !important;
+  color: gray;
+}
+
+ion-label {
+  color: lightgray;
 }
 
 ion-menu.md ion-content {
@@ -229,6 +242,11 @@ ion-item.selected {
   --color: #fff;
 }
 
+ion-list {
+  margin-left: 50px;
+  display: inherit;
+}
+
 .heroMain {
   height: 200px;
 }
@@ -262,5 +280,23 @@ ion-item.selected {
   --background: orange !important;
   height: 100px;
   padding: 10px;
+}
+
+.mainToolbar {
+  --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+}
+
+ion-title {
+  color: white;
+}
+
+.logoHere {
+  height: 80px;
+  float: right;
+  width: 20%;
+}
+
+.footer {
+  --background: darkgray;
 }
 /*# sourceMappingURL=index.css.map */

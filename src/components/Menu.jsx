@@ -5,12 +5,11 @@ import {
     IonItem,
     IonLabel,
     IonList,
-    IonToolbar,
-    IonTitle,
-    IonHeader,
-
+    IonText,
     IonMenu,
     IonMenuToggle,
+
+    IonTitle,
 
 } from '@ionic/react';
 
@@ -68,23 +67,23 @@ export const Menu = () => {
 
     const styles = {
         bkground: 'menuBackground',
+        ltbkground: 'listBackground',
+        itembkground: 'itemBackground',
 
     }
     return (
         <>
             <IonMenu contentId="main" type="reveal">
-                <IonHeader >
-                    {/* <IonToolbar >
-                        <IonTitle>Welcome Traveler!</IonTitle>
-                    </IonToolbar> */}
-                </IonHeader>
+
                 <IonContent className={styles.bkground}>
+                    <IonTitle>Welcome Traveler!</IonTitle>
+                    <IonText></IonText>
                     <IonList className={styles.bkground}>
                         {appPages.map((appPage, index) => {
                             return (
                                 <IonMenuToggle key={index} autoHide={false}>
 
-                                    <IonItem className={`${styles.bkground} ${location.pathname === appPage.url ? 'selected' : ''}`} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
+                                    <IonItem className={`${styles.itembkground} ${location.pathname === appPage.url ? 'selected' : ''}`} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                                         <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
                                         <IonLabel>{appPage.title}</IonLabel>
                                     </IonItem>

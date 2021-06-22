@@ -5,11 +5,23 @@
 } */
 
 .menuBackground {
-  --background: var(--ion-color-secondary);
+  --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+  ;
+}
+
+
+
+.itemBackground {
+  --background: transparent;
 }
 
 .list-md {
-  background: var(--ion-item-background, var(--ion-background-color)) !important;
+  --background: none !important;
+  color: gray;
+}
+
+ion-label {
+  color: lightgray;
 }
 
 ion-menu.md ion-content {
@@ -22,6 +34,7 @@ ion-menu.md ion-content {
 
 ion-menu.md ion-list {
   padding: 20px 0;
+
 }
 
 ion-menu.md ion-note {
@@ -122,4 +135,9 @@ ion-note {
 
 ion-item.selected {
   --color: #fff;
+}
+
+ion-list {
+  margin-left: 50px;
+  display: inherit;
 }
