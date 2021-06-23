@@ -11,7 +11,13 @@
     box-shadow: none;
     background-color: transparent;
     margin: 0px 60px 10px;
+    color: color(alternate) !important;
 
+    &__title {
+        color: color(alternate) !important;
+        font-size: 2.5em;
+        padding: 0;
+    }
 
 }
 

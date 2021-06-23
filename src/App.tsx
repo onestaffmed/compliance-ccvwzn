@@ -30,7 +30,7 @@ const App = () => {
   return (
     <IonApp>
       <IonReactRouter>
-        <IonSplitPane when="md" contentId="main" >
+        <IonSplitPane when="(max-width:40px)" contentId="main" >
           <Menu />
           <IonRouterOutlet id="main">
             <Header />

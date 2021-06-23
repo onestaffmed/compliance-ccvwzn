@@ -261,6 +261,12 @@ ion-list {
           box-shadow: none;
   background-color: transparent;
   margin: 0px 60px 10px;
+  color: #34495e !important;
+}
+.headerCard__title {
+  color: #34495e !important;
+  font-size: 2.5em;
+  padding: 0;
 }
 
 .heroMain {

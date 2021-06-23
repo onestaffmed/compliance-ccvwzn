@@ -12,6 +12,7 @@ import {
     IonRow,
     IonCol,
     IonButton,
+    IonTitle,
 } from "@ionic/react";
 
 const Landing = () => {
@@ -21,14 +22,17 @@ const Landing = () => {
     return (
         <div className="backgroundImage">
             <br />
-            <IonCard className="headerCard" ><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dicta, quibusdam quam illum molestiae eius asperiores ratione aliquam vel! Aliquam corporis accusamus, quis impedit tenetur quas consequuntur non mollitia illo?</p>
+            <IonCard className="headerCard" >
+                <IonTitle className="headerCard__title">The last app you'll need...</IonTitle>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dicta, quibusdam quam illum molestiae eius asperiores ratione aliquam vel! Aliquam corporis accusamus, quis impedit tenetur quas consequuntur non mollitia illo?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quas quam eligendi atque asperiores incidunt similique corrupti necessitatibus omnis, eum dolor laboriosam tempore nesciunt officiis quasi, quo sed unde pariatur.</p></IonCard>
             <IonGrid>
                 <IonRow>
                     <IonCol>
                         <IonCard className="cardOne">
                             <IonCardHeader>
-                                <IonCardTitle className="landingText" color="primary">This is some random text</IonCardTitle>
+                                <IonCardTitle className="landingText" color="primary">Everything in one place...</IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</IonCardContent>
 
@@ -46,7 +50,7 @@ const Landing = () => {
                     <IonCol>
                         <IonCard className="cardTwo">
                             <IonCardHeader>
-                                <IonCardTitle className="landingText">This is some random text</IonCardTitle>
+                                <IonCardTitle className="landingText">Notification of upcoming expiration</IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</IonCardContent>
 
@@ -59,7 +63,7 @@ const Landing = () => {
                     <IonCol>
                         <IonCard className="cardOne">
                             <IonCardHeader>
-                                <IonCardTitle className="landingText">This is some random text</IonCardTitle>
+                                <IonCardTitle className="landingText">Get on the road faster</IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</IonCardContent>
 
