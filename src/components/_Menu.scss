@@ -9,7 +9,15 @@
   ;
 }
 
+.menuHamburger {
 
+  --color: white !important;
+
+}
+
+.menu {
+  --side-max-width: 20%;
+}
 
 .itemBackground {
   --background: transparent;
@@ -20,9 +28,9 @@
   color: gray;
 }
 
-ion-label {
-  color: lightgray;
-}
+// ion-label {
+//   color: white !important;
+// }
 
 ion-menu.md ion-content {
   --padding-start: 8px;
@@ -59,7 +67,7 @@ ion-menu.md ion-list#inbox-list ion-list-header {
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
   margin-bottom: 18px;
-  color: #757575;
+
   min-height: 26px;
 }
 

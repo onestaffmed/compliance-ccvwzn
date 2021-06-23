@@ -118,6 +118,14 @@ http://ionicframework.com/docs/theming/ */
   --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
 }
 
+.menuHamburger {
+  --color: white !important;
+}
+
+.menu {
+  --side-max-width: 20%;
+}
+
 .itemBackground {
   --background: transparent;
 }
@@ -125,10 +133,6 @@ http://ionicframework.com/docs/theming/ */
 .list-md {
   --background: none !important;
   color: gray;
-}
-
-ion-label {
-  color: lightgray;
 }
 
 ion-menu.md ion-content {
@@ -164,7 +168,6 @@ ion-menu.md ion-list#inbox-list ion-list-header {
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
   margin-bottom: 18px;
-  color: #757575;
   min-height: 26px;
 }
 
@@ -247,6 +250,18 @@ ion-list {
   display: inherit;
 }
 
+.backgroundImage {
+  background-image: url("/src/images/background/landing_background.png");
+  background-size: cover;
+  margin: 0;
+}
+
+.headerCard {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0px 60px 10px;
+}
+
 .heroMain {
   height: 200px;
 }
@@ -269,16 +284,19 @@ ion-list {
 .cardOne {
   --background: var(--ion-color-primary-tint);
   --color: white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
 }
 
 .cardTwo {
   --background: var(--ion-color-secondary);
   --color: white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
 }
 
 .headerImage {
-  --background: orange !important;
-  height: 100px;
+  --background-color: orange !important;
   padding: 10px;
 }
 
@@ -297,6 +315,7 @@ ion-title {
 }
 
 .footer {
-  --background: darkgray;
+  --background: transparent;
+  padding-bottom: 10px;
 }
 /*# sourceMappingURL=index.css.map */

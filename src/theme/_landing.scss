@@ -1,6 +1,20 @@
 @use 'colors'as *;
 @use 'variables'as *;
 
+.backgroundImage {
+    background-image: url("/src/images/background/landing_background.png");
+    background-size: cover;
+    margin: 0;
+}
+
+.headerCard {
+    box-shadow: none;
+
+    margin: 0px 60px 10px;
+
+
+}
+
 .heroMain {
     height: 200px;
 }
@@ -18,16 +32,19 @@
 .cardOne {
     --background: var(--ion-color-primary-tint);
     --color: white;
+    box-shadow: 0 8px 6px -6px black;
+
 }
 
 .cardTwo {
     --background: var(--ion-color-secondary);
     --color: white;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .headerImage {
-    --background: orange !important;
-    height: 100px;
+    --background-color: orange !important;
+
     padding: 10px;
 }
 

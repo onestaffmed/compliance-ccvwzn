@@ -11,6 +11,7 @@ const Footer = () => {
                     <p>© {(new Date().getFullYear())} Project Roo</p>
                 </div>
                 <div>Terms & Conditions</div>
+                <br />
             </IonToolbar>
         </IonFooter>
     );
