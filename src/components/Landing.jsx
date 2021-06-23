@@ -66,7 +66,7 @@ const Landing = () => {
                         </IonCard>
                     </IonCol>
                     <IonCol>
-                        <IonButton className="heroButton" color="tertiary">Click Here</IonButton>
+                        <IonButton className="heroButton" color="tertiary">Sign Up Now</IonButton>
                         {/* <IonImg className="heroMain" alt="documents" src={documentImage} /> */}
                     </IonCol>
                 </IonRow>

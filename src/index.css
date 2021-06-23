@@ -259,6 +259,7 @@ ion-list {
 .headerCard {
   -webkit-box-shadow: none;
           box-shadow: none;
+  background-color: transparent;
   margin: 0px 60px 10px;
 }
 
@@ -317,5 +318,7 @@ ion-title {
 .footer {
   --background: transparent;
   padding-bottom: 10px;
+  border: none;
+  position: none;
 }
 /*# sourceMappingURL=index.css.map */
