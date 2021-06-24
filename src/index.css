@@ -302,7 +302,6 @@ ion-list {
 
 .cardTwo {
   --background: var(--ion-color-secondary);
-  --color: white;
   -webkit-box-shadow: 0 8px 6px -6px black;
           box-shadow: 0 8px 6px -6px black;
   border: none;

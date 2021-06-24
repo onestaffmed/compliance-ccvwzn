@@ -39,7 +39,8 @@ const Landing = () => {
                             <IonCardHeader>
                                 <IonCardTitle className="landingText" color="primary">everything in one place...</IonCardTitle>
                             </IonCardHeader>
-                            <IonCardContent >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</IonCardContent>
+                            <IonCardContent ><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</p>
+                            </IonCardContent>
 
 
                         </IonCard>
@@ -53,11 +54,15 @@ const Landing = () => {
                     <IonCol>
                         <IonCard className="cardTwo">
                             <IonCardHeader>
+                                <IonImg className="heroMain" alt="documents" src={documentImage} />
+                                <br />
                                 <IonCardTitle className="landingText">notification of upcoming expiration</IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent >
-                                <IonImg className="heroMain" alt="documents" src={documentImage} />
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</IonCardContent>
+
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</p>
+                            </IonCardContent>
 
                         </IonCard>
                     </IonCol>
@@ -70,7 +75,8 @@ const Landing = () => {
                             <IonCardHeader>
                                 <IonCardTitle className="landingText">get on the road faster</IonCardTitle>
                             </IonCardHeader>
-                            <IonCardContent >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?
+                            <IonCardContent >
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio molestiae expedita accusamus quidem eius, omnis laboriosam totam error debitis doloremque nobis sequi labore maxime dolorem quod minus illum consequatur?</p>
                                 <br />
                                 <IonButton className="heroButton" color="tertiary" >Sign Up Now</IonButton>
                             </IonCardContent>
