@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx';
 import Profile from './pages/profile.jsx';
 import Header from './layout/Header';
 
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -42,6 +43,7 @@ const App = () => {
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
+
     </IonApp>
   );
 };

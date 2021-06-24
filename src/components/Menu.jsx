@@ -15,7 +15,7 @@ import {
 
 import { useLocation } from 'react-router-dom';
 import { archiveOutline, archiveSharp, heartOutline, heartSharp, personCircleOutline, home, homeSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
-
+import Footer from '../layout/Footer';
 
 var appPages = [
     {
@@ -92,6 +92,7 @@ export const Menu = () => {
                         })}
                     </IonList>
                 </IonContent>
+                <Footer />
             </IonMenu>
 
 

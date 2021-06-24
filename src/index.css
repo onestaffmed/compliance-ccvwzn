@@ -307,10 +307,6 @@ ion-list {
   padding: 10px;
 }
 
-.mainToolbar {
-  --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
-}
-
 ion-title {
   color: white;
 }
@@ -321,10 +317,25 @@ ion-title {
   width: 20%;
 }
 
+.mainToolbar {
+  --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+}
+
 .footer {
-  --background: transparent;
+  --background: linear-gradient(333deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
   padding-bottom: 10px;
-  border: none;
-  position: none;
+  border: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ion-align-self-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0;
 }
 /*# sourceMappingURL=index.css.map */

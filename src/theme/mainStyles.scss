@@ -7,10 +7,30 @@
     color: color(primary);
 }
 
+.mainToolbar {
+    --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+
+
+
+}
+
 .footer {
-    // --background: linear-gradient(333deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
-    --background: transparent;
+    --background: linear-gradient(333deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+    // --background: transparent;
     padding-bottom: 10px;
-    border: none;
-    position: none;
+    border: 0;
+
+
+}
+
+.container {
+    width: 80%;
+
+    margin: 0 auto;
+
+}
+
+.ion-align-self-center {
+    align-self: center;
+    padding: 0;
 }

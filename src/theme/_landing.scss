@@ -8,6 +8,7 @@
 }
 
 .headerCard {
+    // padding-top: 20px;
     box-shadow: none;
     background-color: transparent;
     margin: 0px 60px 10px;
@@ -54,9 +55,7 @@
     padding: 10px;
 }
 
-.mainToolbar {
-    --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
-}
+
 
 ion-title {
     color: white;
@@ -67,3 +66,7 @@ ion-title {
     float: right;
     width: 20%;
 }
+
+// .heroButton {
+//     align-self: center;
+// }
