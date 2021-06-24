@@ -118,12 +118,16 @@ http://ionicframework.com/docs/theming/ */
   --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
 }
 
+.toolbar-title {
+  overflow: show;
+}
+
 .menuHamburger {
   --color: white !important;
 }
 
 .menu {
-  --side-max-width: 20%;
+  --side-max-width: 30%;
 }
 
 .itemBackground {
@@ -260,12 +264,11 @@ ion-list {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: transparent;
-  margin: 0px 60px 10px;
   color: #34495e !important;
 }
 .headerCard__title {
+  background-color: transparent !important;
   color: #34495e !important;
-  font-size: 2.5em;
   padding: 0;
 }
 
@@ -285,14 +288,16 @@ ion-list {
 
 .landingText {
   color: white;
-  font-weight: 600;
+  color: #34495e;
+  font-weight: 500;
 }
 
-.cardOne {
-  --background: var(--ion-color-primary-tint);
-  --color: white;
-  -webkit-box-shadow: 0 8px 6px -6px black;
-          box-shadow: 0 8px 6px -6px black;
+.cardTransparent {
+  color: #34495e;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  --background: transparent;
 }
 
 .cardTwo {
@@ -300,6 +305,7 @@ ion-list {
   --color: white;
   -webkit-box-shadow: 0 8px 6px -6px black;
           box-shadow: 0 8px 6px -6px black;
+  border: none;
 }
 
 .headerImage {
@@ -309,6 +315,10 @@ ion-list {
 
 ion-title {
   color: white;
+  word-wrap: normal;
+  font-size: 20px;
+  text-align: left;
+  padding: 20px;
 }
 
 .logoHere {

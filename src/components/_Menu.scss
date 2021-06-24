@@ -9,6 +9,10 @@
   ;
 }
 
+.toolbar-title {
+  overflow: show;
+}
+
 .menuHamburger {
 
   --color: white !important;
@@ -16,7 +20,7 @@
 }
 
 .menu {
-  --side-max-width: 20%;
+  --side-max-width: 30%;
 }
 
 .itemBackground {

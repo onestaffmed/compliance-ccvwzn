@@ -12,7 +12,7 @@ const Header = () => {
                 <IonButtons slot="start">
                     <IonMenuButton className="menuHamburger" auto-hide="true" />
                 </IonButtons>
-                <IonTitle></IonTitle>
+
                 <IonImg className="logoHere" alt="documents" src={logoHere} />
             </IonToolbar>
         </IonHeader>

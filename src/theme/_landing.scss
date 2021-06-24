@@ -11,13 +11,15 @@
     // padding-top: 20px;
     box-shadow: none;
     background-color: transparent;
-    margin: 0px 60px 10px;
+    // margin: 0px 60px 10px;
     color: color(alternate) !important;
 
     &__title {
+        background-color: transparent !important;
         color: color(alternate) !important;
-        font-size: 2.5em;
+        // font-size: 2.5rem;
         padding: 0;
+
     }
 
 }
@@ -33,20 +35,32 @@
 
 .landingText {
     color: white;
-    font-weight: 600;
+    color: color(alternate);
+    font-weight: 500;
 }
 
-.cardOne {
-    --background: var(--ion-color-primary-tint);
-    --color: white;
-    box-shadow: 0 8px 6px -6px black;
+.cardTransparent {
+    // --background: var(--ion-color-primary-tint);
+    color: color(alternate);
+    // box-shadow: 0 8px 6px -6px black;
+    border: none;
+    box-shadow: none;
+    --background: transparent;
 
 }
+
+// .cardOne {
+//     --background: var(--ion-color-primary-tint);
+//     --color: white;
+//     box-shadow: 0 8px 6px -6px black;
+
+// }
 
 .cardTwo {
     --background: var(--ion-color-secondary);
     --color: white;
     box-shadow: 0 8px 6px -6px black;
+    border: none;
 }
 
 .headerImage {
@@ -59,6 +73,10 @@
 
 ion-title {
     color: white;
+    word-wrap: normal;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px;
 }
 
 .logoHere {
