@@ -123,7 +123,13 @@ http://ionicframework.com/docs/theming/ */
 }
 
 .menuHamburger {
+  --color: var(--ion-color-primary) !important;
+}
+.menuHamburger:hover {
   --color: white !important;
+  opacity: 1;
+  --background-hover-opacity: .5;
+  --background-hover: var(--ion-color-secondary) !important;
 }
 
 .menu {
@@ -327,7 +333,10 @@ ion-title {
 }
 
 .mainToolbar {
-  --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+  --background: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-image: none;
 }
 
 .footer {

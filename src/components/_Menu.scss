@@ -15,8 +15,14 @@
 
 .menuHamburger {
 
-  --color: white !important;
+  --color: var(--ion-color-primary) !important;
 
+  &:hover {
+    --color: white !important;
+    opacity: 1;
+    --background-hover-opacity: .5;
+    --background-hover: var(--ion-color-secondary) !important;
+  }
 }
 
 .menu {
