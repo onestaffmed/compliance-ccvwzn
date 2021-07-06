@@ -42,24 +42,7 @@ var appPages = [
         iosIcon: heartOutline,
         mdIcon: heartSharp
     },
-    {
-        title: 'Archived',
-        url: '/page/Archived',
-        iosIcon: archiveOutline,
-        mdIcon: archiveSharp
-    },
-    {
-        title: 'Trash',
-        url: '/page/Trash',
-        iosIcon: trashOutline,
-        mdIcon: trashSharp
-    },
-    {
-        title: 'Spam',
-        url: '/page/Spam',
-        iosIcon: warningOutline,
-        mdIcon: warningSharp
-    }
+
 ];
 
 export const Menu = () => {

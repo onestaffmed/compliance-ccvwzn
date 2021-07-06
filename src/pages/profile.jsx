@@ -1,15 +1,17 @@
-import { IonContent, IonPage, IonCard } from "@ionic/react";
-import Footer from "../layout/Footer";
+import { IonContent, IonPage } from "@ionic/react";
+
+
 import Header from '../layout/Header';
+import UserProfile from '../components/userProfile';
+
 
 const Profile = () => {
     return (
         <IonPage>
             <Header />
             <IonContent>
-                <IonCard  >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse voluptate dolore at! Aliquid architecto nobis, recusandae minima, aperiam optio et blanditiis repudiandae, deleniti soluta suscipit. Eveniet voluptate perspiciatis voluptates unde.</IonCard>
+                <UserProfile />
             </IonContent>
-            <Footer />
         </IonPage>
     );
 };

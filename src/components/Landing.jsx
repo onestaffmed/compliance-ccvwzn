@@ -27,11 +27,15 @@ const Landing = () => {
             <br />
 
             <IonCard className="headerCard" >
-                <IonToolbar>
+
+                <IonCardHeader>
                     <IonCardTitle className="headerCard__title">the last app you'll need...</IonCardTitle>
-                </IonToolbar>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dicta, quibusdam quam illum molestiae eius asperiores ratione aliquam vel! Aliquam corporis accusamus, quis impedit tenetur quas consequuntur non mollitia illo?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quas quam eligendi atque asperiores incidunt similique corrupti necessitatibus omnis, eum dolor laboriosam tempore nesciunt officiis quasi, quo sed unde pariatur.</p></IonCard>
+                </IonCardHeader>
+
+                <IonCardContent>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dicta, quibusdam quam illum molestiae eius asperiores ratione aliquam vel! Aliquam corporis accusamus, quis impedit tenetur quas consequuntur non mollitia illo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quas quam eligendi atque asperiores incidunt similique corrupti necessitatibus omnis, eum dolor laboriosam tempore nesciunt officiis quasi, quo sed unde pariatur.</p>
+                </IonCardContent></IonCard>
             <IonGrid>
                 <IonRow>
                     <IonCol>
