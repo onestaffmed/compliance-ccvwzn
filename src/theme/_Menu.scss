@@ -124,11 +124,12 @@ ion-menu.ios ion-item {
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: #262626
 }
 
 ion-menu.ios ion-item .selected ion-icon {
-  color: var(--ion-color-primary);
+  --color: white !important;
+
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {
@@ -153,6 +154,12 @@ ion-note {
 
 ion-item.selected {
   --color: #fff;
+  --background: var(--ion-color-secondary) !important;
+  font-weight: 600;
+}
+
+ion-icon.selected {
+  --color: white;
 }
 
 ion-list {
