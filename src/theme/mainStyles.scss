@@ -1,7 +1,8 @@
 @use 'colors'as *;
 @use 'variables'as *;
-@use '../components/Menu'as *;
+@use 'Menu'as *;
 @use 'landing'as *;
+@use 'profile'as *;
 
 .landingText {
     color: color(primary);
@@ -39,4 +40,14 @@
 
 .mainContainer {
     width: 80%;
+}
+
+.cardPrimary {
+    // --background: var(--ion-color-primary-tint);
+    color: color(alternate);
+    // box-shadow: 0 8px 6px -6px black;
+    border: none;
+    box-shadow: none;
+    --background: color(primary);
+
 }

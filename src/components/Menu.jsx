@@ -10,6 +10,7 @@ import {
     IonMenuToggle,
     IonToolbar,
     IonTitle,
+    IonHeader,
 
 } from '@ionic/react';
 
@@ -59,9 +60,11 @@ export const Menu = () => {
             <IonMenu contentId="main" type="reveal" className="menu">
 
                 <IonContent className={styles.bkground}>
-                    <IonToolbar className={styles.itembkground} >
-                        <IonTitle>Welcome Traveler!</IonTitle>
-                    </IonToolbar>
+                    <IonHeader>
+                        <IonToolbar className={styles.itembkground} >
+                            <IonTitle>Welcome Traveler!</IonTitle>
+                        </IonToolbar>
+                    </IonHeader>
                     <IonText></IonText>
                     <IonList className={styles.bkground}>
                         {appPages.map((appPage, index) => {
