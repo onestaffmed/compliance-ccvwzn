@@ -338,6 +338,16 @@ ion-title {
   width: 20%;
 }
 
+.profileContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 200px) and (max-width: 1023px) {
+  .profileContainer {
+    width: 100%;
+  }
+}
+
 .profileEditIcon {
   text-align: right !important;
 }

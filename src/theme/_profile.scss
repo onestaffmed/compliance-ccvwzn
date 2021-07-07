@@ -1,3 +1,14 @@
+@use 'mixins'as *;
+
+.profileContainer {
+    width: 80%;
+    margin: 0 auto;
+
+    @include supermobile {
+        width: 100%;
+    }
+}
+
 .profileEditIcon {
     text-align: right !important;
 }
