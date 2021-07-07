@@ -47,7 +47,6 @@ const UserProfile = () => {
 
                                 <p>Address</p>
                                 <p>Phone</p>
-
                             </IonCardContent>
 
                         </IonCard>
@@ -102,7 +101,6 @@ const UserProfile = () => {
                             </IonCardHeader>
                             <IonCardContent>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus enim minima consequatur unde perspiciatis maiores ea! Quae enim hic doloremque sed exercitationem, eius, reprehenderit aliquam doloribus repellat, iste molestias iusto.</p>
-
                             </IonCardContent>
                         </IonCard>
                         <IonItemDivider color="secondary"></IonItemDivider>
@@ -155,7 +153,6 @@ const UserProfile = () => {
                             </IonCardHeader>
                             <IonCardContent>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit ut culpa aperiam qui iste corrupti exercitationem quam ipsum sunt iusto soluta dicta nulla, praesentium placeat voluptates ratione unde dolore!</p>
-
                             </IonCardContent>
                         </IonCard>
                         <IonCard className="cardTransparent">
@@ -167,7 +164,6 @@ const UserProfile = () => {
                             </IonCardHeader>
                             <IonCardContent>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi nam blanditiis ducimus expedita? Animi, libero facere sed quos odit repudiandae voluptatum sequi cum est maxime, qui explicabo, architecto incidunt.</p>
-
                             </IonCardContent>
                         </IonCard>
                     </IonCol>
