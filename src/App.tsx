@@ -37,7 +37,6 @@ const App = () => {
             <Header />
             <Route path="/home" exact={true} component={Home} />
             <Route exact path="/" render={() => <Redirect to="/home" />} />
-
             <Route path="/profile" component={Profile} exact={true} />
 
           </IonRouterOutlet>
