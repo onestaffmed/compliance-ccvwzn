@@ -1,16 +1,38 @@
 import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonAvatar, IonGrid, IonRow, IonCol, IonItemDivider, IonHeader, IonToolbar } from "@ionic/react";
+
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faPenSquare } from '@fortawesome/free-solid-svg-icons'
 import { create, } from 'ionicons/icons';
+import { getUserProfile } from '../utils/api';
+import { useEffect, useState } from 'react';
+import profile from "../profile"
 
 const UserProfile = () => {
+    var users = {
+        user: [{
+            "id": 11,
+            "firstName": "Hermy",
+            "lastName": "Kleinbaum",
+            "email": "hkleinbauma@biglobe.ne.jp",
+            "phoneNumber": "634-184-6937",
+            "birthdate": "2/17/1992"
+        }]
+    };
+    // const [userData, setUser] = useState(profile);
+    // useEffect(() => {
+    //     getUserProfile()
+    //         .then(({ data: profile }) => setUser(profile))
+    //         .catch((err) => console.log(err));
+    // }, []);
 
     return (
         <div className="profileContainer">
 
 
+
             <IonToolbar>
-                Profile Test
+                Profile T
             </IonToolbar>
 
 
@@ -22,7 +44,12 @@ const UserProfile = () => {
                                 <IonAvatar >
                                     <img alt="user" src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" />
                                 </IonAvatar>
-                                <IonCardTitle>FirstName LastName  <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div></IonCardTitle>
+                                {users.user.map(({ id, firstName, lastName }) => (
+                                    <IonCardTitle key={id}>
+                                        {firstName} {lastName}
+                                        <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div>
+                                    </IonCardTitle>
+                                ))}
 
                             </IonCardHeader>
 
@@ -44,9 +71,15 @@ const UserProfile = () => {
                             </IonCardHeader>
 
                             <IonCardContent>
-
-                                <p>Address</p>
-                                <p>Phone</p>
+                                {users.user.map(({ id, email, phoneNumber, birthdate }) => (
+                                    <p key={id}>
+                                        <strong>Email Address:</strong> <br />
+                                        {email} <br /><br />
+                                        <strong>Phone Number:</strong>
+                                        <br /> {phoneNumber}<br /> <br />
+                                        <strong>Birthdate:</strong><br />
+                                        {birthdate}</p>
+                                ))}
                             </IonCardContent>
 
                         </IonCard>
