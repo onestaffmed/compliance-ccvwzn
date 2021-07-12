@@ -1,12 +1,13 @@
-import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonAvatar, IonGrid, IonRow, IonCol, IonItemDivider, IonHeader, IonToolbar } from "@ionic/react";
+import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonAvatar, IonGrid, IonRow, IonCol, IonItemDivider, IonHeader, IonToolbar, IonLabel, IonItem, IonImg, IonButton } from "@ionic/react";
 
-import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faPenSquare } from '@fortawesome/free-solid-svg-icons'
-import { create, } from 'ionicons/icons';
-import { getUserProfile } from '../utils/api';
+import { faPenSquare } from '@fortawesome/free-solid-svg-icons'
+
 import { useEffect, useState } from 'react';
-import profile from "../profile"
+
+import MyAccordion from "../components/accordian";
+
 
 const UserProfile = () => {
     var users = {
@@ -19,17 +20,16 @@ const UserProfile = () => {
             "birthdate": "2/17/1992"
         }]
     };
-    // const [userData, setUser] = useState(profile);
-    // useEffect(() => {
-    //     getUserProfile()
-    //         .then(({ data: profile }) => setUser(profile))
-    //         .catch((err) => console.log(err));
-    // }, []);
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        fetch("https://randomuser.me/api/?results=5")
+            .then((r) => r.json())
+            .then((d) => setData(d.results));
+    }, []);
+
 
     return (
         <div className="profileContainer">
-
-
 
             <IonToolbar>
                 Profile T
@@ -133,7 +133,42 @@ const UserProfile = () => {
                                 </IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus enim minima consequatur unde perspiciatis maiores ea! Quae enim hic doloremque sed exercitationem, eius, reprehenderit aliquam doloribus repellat, iste molestias iusto.</p>
+                                <MyAccordion
+                                    list={data}
+                                    renderHeader={(item) => {
+                                        return (
+                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+                                                {item.name.first} {item.name.last}
+                                            </span>
+                                        );
+                                    }}
+                                    renderPanel={(item) => {
+                                        return (
+                                            <div>
+                                                <IonItem style={{ "--padding-start": 0 }}>
+
+                                                    <IonLabel>
+                                                        <div>
+                                                            {" "}
+                                                            {item.location.city} {item.location.state}
+                                                        </div>
+                                                        <div> {item.location.country}</div>
+                                                        {/* <div className="ion-text-wrap">{item.body}</div> */}
+                                                    </IonLabel>
+                                                </IonItem>
+                                                <div style={{ padding: 6 }}>
+                                                    <IonButton
+                                                        className="ion-float-right"
+                                                        style={{ zoom: 0.9 }}
+                                                        onClick={() => alert("Item Clicked " + item.email)}
+                                                    >
+                                                        VIEW
+                                                    </IonButton>
+                                                </div>
+                                            </div>
+                                        );
+                                    }}
+                                />
                             </IonCardContent>
                         </IonCard>
                         <IonItemDivider color="secondary"></IonItemDivider>
@@ -145,7 +180,42 @@ const UserProfile = () => {
                                 </IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, cupiditate! Odio ipsum aperiam, similique excepturi quae impedit molestias nostrum beatae ea voluptas numquam dignissimos, praesentium dicta provident asperiores harum autem!</p>
+                                <MyAccordion
+                                    list={data}
+                                    renderHeader={(item) => {
+                                        return (
+                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+                                                {item.name.first} {item.name.last}
+                                            </span>
+                                        );
+                                    }}
+                                    renderPanel={(item) => {
+                                        return (
+                                            <div>
+                                                <IonItem style={{ "--padding-start": 0 }}>
+
+                                                    <IonLabel>
+                                                        <div>
+                                                            {" "}
+                                                            {item.location.city} {item.location.state}
+                                                        </div>
+                                                        <div> {item.location.country}</div>
+                                                        {/* <div className="ion-text-wrap">{item.body}</div> */}
+                                                    </IonLabel>
+                                                </IonItem>
+                                                <div style={{ padding: 6 }}>
+                                                    <IonButton
+                                                        className="ion-float-right"
+                                                        style={{ zoom: 0.9 }}
+                                                        onClick={() => alert("Item Clicked " + item.email)}
+                                                    >
+                                                        VIEW
+                                                    </IonButton>
+                                                </div>
+                                            </div>
+                                        );
+                                    }}
+                                />
 
                             </IonCardContent>
                         </IonCard>
@@ -170,8 +240,42 @@ const UserProfile = () => {
                                 </IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nemo quod placeat nisi in facilis repellendus voluptatum nihil voluptates hic quisquam, praesentium debitis, esse aut minus doloribus quibusdam consequatur officia!</p>
+                                <MyAccordion
+                                    list={data}
+                                    renderHeader={(item) => {
+                                        return (
+                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+                                                {item.name.first} {item.name.last}
+                                            </span>
+                                        );
+                                    }}
+                                    renderPanel={(item) => {
+                                        return (
+                                            <div>
+                                                <IonItem style={{ "--padding-start": 0 }}>
 
+                                                    <IonLabel>
+                                                        <div>
+                                                            {" "}
+                                                            {item.location.city} {item.location.state}
+                                                        </div>
+                                                        <div> {item.location.country}</div>
+                                                        {/* <div className="ion-text-wrap">{item.body}</div> */}
+                                                    </IonLabel>
+                                                </IonItem>
+                                                <div style={{ padding: 6 }}>
+                                                    <IonButton
+                                                        className="ion-float-right"
+                                                        style={{ zoom: 0.9 }}
+                                                        onClick={() => alert("Item Clicked " + item.email)}
+                                                    >
+                                                        VIEW
+                                                    </IonButton>
+                                                </div>
+                                            </div>
+                                        );
+                                    }}
+                                />
                             </IonCardContent>
                         </IonCard>
 
@@ -185,7 +289,42 @@ const UserProfile = () => {
                                 </IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit ut culpa aperiam qui iste corrupti exercitationem quam ipsum sunt iusto soluta dicta nulla, praesentium placeat voluptates ratione unde dolore!</p>
+                                <MyAccordion
+                                    list={data}
+                                    renderHeader={(item) => {
+                                        return (
+                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+                                                {item.name.first} {item.name.last}
+                                            </span>
+                                        );
+                                    }}
+                                    renderPanel={(item) => {
+                                        return (
+                                            <div>
+                                                <IonItem style={{ "--padding-start": 0 }}>
+
+                                                    <IonLabel>
+                                                        <div>
+                                                            {" "}
+                                                            {item.location.city} {item.location.state}
+                                                        </div>
+                                                        <div> {item.location.country}</div>
+                                                        {/* <div className="ion-text-wrap">{item.body}</div> */}
+                                                    </IonLabel>
+                                                </IonItem>
+                                                <div style={{ padding: 6 }}>
+                                                    <IonButton
+                                                        className="ion-float-right"
+                                                        style={{ zoom: 0.9 }}
+                                                        onClick={() => alert("Item Clicked " + item.email)}
+                                                    >
+                                                        VIEW
+                                                    </IonButton>
+                                                </div>
+                                            </div>
+                                        );
+                                    }}
+                                />
                             </IonCardContent>
                         </IonCard>
                         <IonCard className="cardTransparent">
