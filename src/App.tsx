@@ -6,6 +6,7 @@ import Menu from './components/menu';
 import Home from './pages/Home.jsx';
 import Profile from './pages/profile.jsx';
 import Header from './layout/Header';
+import LicenseTest from './components/licenses';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -38,7 +39,7 @@ const App = () => {
             <Route path="/home" exact={true} component={Home} />
             <Route exact path="/" render={() => <Redirect to="/home" />} />
             <Route path="/profile" component={Profile} exact={true} />
-
+            <Route path="/licensetest" component={LicenseTest} exact={true} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
