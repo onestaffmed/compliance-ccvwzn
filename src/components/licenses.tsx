@@ -18,14 +18,15 @@ import {
 import React, { useEffect, useState } from "react";
 import MyAccordion from "../components/accordian";
 import Header from '../layout/Header';
-
+import { getAllLicenses } from '../utils/api';
 
 const LicenseTest: React.FC = () => {
-    const [data, setData] = useState<Array<any>>([]);
+    const [licenses, setLicense] = useState<Array<any>>([]);
+
     useEffect(() => {
-        fetch("https://randomuser.me/api/?results=5")
-            .then((r) => r.json())
-            .then((d) => setData(d.results));
+        getAllLicenses()
+            .then(({ data: licenses }) => setLicense(licenses))
+            .catch((err) => console.log(err));
     }, []);
 
     return (
@@ -45,11 +46,11 @@ const LicenseTest: React.FC = () => {
                                 <IonCard className="cardPrimary" ><IonCardTitle className="ion-padding" color="warning">Expiring</IonCardTitle>
                                     <IonCardContent>
                                         <MyAccordion
-                                            list={data}
+                                            list={licenses}
                                             renderHeader={(item: any) => {
                                                 return (
                                                     <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                        {item.name.first} {item.name.last}
+                                                        {item.state} <br /> {item.type}
                                                     </span>
                                                 );
                                             }}
@@ -61,9 +62,9 @@ const LicenseTest: React.FC = () => {
                                                             <IonLabel>
                                                                 <div>
                                                                     {" "}
-                                                                    {item.location.city} {item.location.state}
+                                                                    Expiration: {item.expiration}
                                                                 </div>
-                                                                <div> {item.location.country}</div>
+                                                                <div> Is Compact? {item.compact}</div>
                                                                 {/* <div className="ion-text-wrap">{item.body}</div> */}
                                                             </IonLabel>
                                                         </IonItem>
@@ -87,11 +88,11 @@ const LicenseTest: React.FC = () => {
                                 <IonCard className="cardPrimary" ><IonCardTitle className="ion-padding" color="danger">Missing</IonCardTitle>
                                     <IonCardContent>
                                         <MyAccordion
-                                            list={data}
+                                            list={licenses}
                                             renderHeader={(item: any) => {
                                                 return (
                                                     <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                        {item.name.first} {item.name.last}
+                                                        {item.state} <br /> {item.type}
                                                     </span>
                                                 );
                                             }}
@@ -99,13 +100,13 @@ const LicenseTest: React.FC = () => {
                                                 return (
                                                     <div>
                                                         <IonItem style={{ "--padding-start": 0 }}>
-                                                            <IonImg src={item.picture.thumbnail} slot="start" />
+
                                                             <IonLabel>
                                                                 <div>
                                                                     {" "}
-                                                                    {item.location.city} {item.location.state}
+                                                                    Expiration: {item.expiration}
                                                                 </div>
-                                                                <div> {item.location.country}</div>
+                                                                <div> Is Compact? {item.compact}</div>
                                                                 {/* <div className="ion-text-wrap">{item.body}</div> */}
                                                             </IonLabel>
                                                         </IonItem>
@@ -115,7 +116,7 @@ const LicenseTest: React.FC = () => {
                                                                 style={{ zoom: 0.9 }}
                                                                 href='/licensetest'
                                                             >
-                                                                DETAILS
+                                                                EDIT
                                                             </IonButton>
                                                         </div>
                                                     </div>
@@ -131,11 +132,11 @@ const LicenseTest: React.FC = () => {
                                 <IonCard className="cardPrimary" ><IonCardTitle className="ion-padding" color="success">Active</IonCardTitle>
                                     <IonCardContent>
                                         <MyAccordion
-                                            list={data}
+                                            list={licenses}
                                             renderHeader={(item: any) => {
                                                 return (
                                                     <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                        {item.name.first} {item.name.last}
+                                                        {item.state} <br /> {item.type}
                                                     </span>
                                                 );
                                             }}
@@ -143,13 +144,13 @@ const LicenseTest: React.FC = () => {
                                                 return (
                                                     <div>
                                                         <IonItem style={{ "--padding-start": 0 }}>
-                                                            <IonImg src={item.picture.thumbnail} slot="start" />
+
                                                             <IonLabel>
                                                                 <div>
                                                                     {" "}
-                                                                    {item.location.city} {item.location.state}
+                                                                    Expiration: {item.expiration}
                                                                 </div>
-                                                                <div> {item.location.country}</div>
+                                                                <div> Is Compact? {item.compact}</div>
                                                                 {/* <div className="ion-text-wrap">{item.body}</div> */}
                                                             </IonLabel>
                                                         </IonItem>
@@ -159,7 +160,7 @@ const LicenseTest: React.FC = () => {
                                                                 style={{ zoom: 0.9 }}
                                                                 href='/licensetest'
                                                             >
-                                                                DETAILS
+                                                                EDIT
                                                             </IonButton>
                                                         </div>
                                                     </div>

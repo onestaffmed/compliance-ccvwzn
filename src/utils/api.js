@@ -6,7 +6,7 @@ export const getUserProfile =() => {
     return axios.get(profileUser);
 };
 
-const userLicenses = `../licenses.json`;
+const userLicenses = `http://localhost:3000/licenses`;
 
 export const getAllLicenses =() => {
     return axios.get(userLicenses);

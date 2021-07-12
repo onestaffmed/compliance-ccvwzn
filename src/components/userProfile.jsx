@@ -8,7 +8,8 @@ import { useEffect, useState } from 'react';
 
 import MyAccordion from "../components/accordian";
 import { withRouter } from "react-router";
-
+import AllLicenses from "./profileBuilder/licenses/allLicenses";
+import { getAllLicenses } from '../utils/api';
 
 const UserProfile = () => {
     var users = {
@@ -28,6 +29,13 @@ const UserProfile = () => {
             .then((d) => setData(d.results));
     }, []);
 
+    const [licenses, setLicense] = useState([]);
+
+    useEffect(() => {
+        getAllLicenses()
+            .then(({ data: licenses }) => setLicense(licenses))
+            .catch((err) => console.log(err));
+    }, []);
 
     return (
         <div className="profileContainer">
@@ -135,15 +143,15 @@ const UserProfile = () => {
                             </IonCardHeader>
                             <IonCardContent>
                                 <MyAccordion
-                                    list={data}
-                                    renderHeader={(item) => {
+                                    list={licenses}
+                                    renderHeader={(item: any) => {
                                         return (
                                             <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                {item.name.first} {item.name.last}
+                                                {item.state} <br /> {item.type}
                                             </span>
                                         );
                                     }}
-                                    renderPanel={(item) => {
+                                    renderPanel={(item: any) => {
                                         return (
                                             <div>
                                                 <IonItem style={{ "--padding-start": 0 }}>
@@ -151,27 +159,32 @@ const UserProfile = () => {
                                                     <IonLabel>
                                                         <div>
                                                             {" "}
-                                                            {item.location.city} {item.location.state}
+                                                            Expiration: {item.expiration}
                                                         </div>
-                                                        <div> {item.location.country}</div>
+                                                        <div> Is Compact? {item.compact}</div>
                                                         {/* <div className="ion-text-wrap">{item.body}</div> */}
                                                     </IonLabel>
                                                 </IonItem>
                                                 <div style={{ padding: 6 }}>
                                                     <IonButton
                                                         className="ion-float-right"
-                                                        style={{ zoom: 0.9, color: 'white' }}
+                                                        style={{ zoom: 0.9 }}
                                                         href='/licensetest'
                                                     >
-                                                        VIEW
+                                                        EDIT
                                                     </IonButton>
                                                 </div>
                                             </div>
                                         );
                                     }}
                                 />
+
                             </IonCardContent>
+
                         </IonCard>
+
+
+
                         <IonItemDivider color="secondary"></IonItemDivider>
                         <IonCard className="cardTransparent">
                             <IonCardHeader>
