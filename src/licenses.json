@@ -1,0 +1,19 @@
+{
+    "licenses": [{
+            "id": 1,
+            "type": "Registered Nurse",
+            "state": "California",
+            "compact": "No",
+            "expiration": "2022-10-31"
+
+        },
+        {
+            "id": 2,
+            "type": "Registered Nurse",
+            "state": "Ohio",
+            "compact": "No",
+            "expiration": "2022-10-31"
+
+        }
+    ]
+}
