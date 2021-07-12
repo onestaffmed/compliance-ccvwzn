@@ -324,7 +324,7 @@ ion-list {
   padding: 10px;
 }
 
-ion-title {
+.menuWelcome {
   color: white;
   word-wrap: normal;
   font-size: 20px;
@@ -350,6 +350,10 @@ ion-title {
 
 .profileEditIcon {
   text-align: right !important;
+}
+
+.header-md::after {
+  background: none;
 }
 
 .mainToolbar {

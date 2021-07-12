@@ -14,8 +14,11 @@ import {
 
 } from '@ionic/react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenSquare, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, heartOutline, heartSharp, personCircleOutline, home, homeSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { archiveOutline, archiveSharp, heartOutline, heartSharp, personCircleOutline, home, homeSharp, mailUnreadOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, documentAttachOutline, documentAttachSharp } from 'ionicons/icons';
 import Footer from '../layout/Footer';
 
 var appPages = [
@@ -32,16 +35,16 @@ var appPages = [
         mdIcon: personCircleOutline
     },
     {
-        title: 'Messages',
-        url: '/page/Messages',
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp
+        title: 'Licenses',
+        url: '/licensetest',
+        iosIcon: documentAttachOutline,
+        mdIcon: documentAttachSharp
     },
     {
-        title: 'Favorites',
-        url: '/page/Favorites',
-        iosIcon: heartOutline,
-        mdIcon: heartSharp
+        title: 'Messages',
+        url: '/messages',
+        iosIcon: mailUnreadOutline,
+        mdIcon: mailUnreadOutline
     },
 
 ];
@@ -62,7 +65,8 @@ export const Menu = () => {
                 <IonContent className={styles.bkground}>
                     <IonHeader>
                         <IonToolbar className={styles.itembkground} >
-                            <IonTitle>Welcome Traveler!</IonTitle>
+                            <IonTitle className='menuWelcome'>Welcome Traveler!</IonTitle>
+                            <div className="profileEditIcon"><FontAwesomeIcon icon={faSignInAlt} color="orange" /></div>
                         </IonToolbar>
                     </IonHeader>
                     <IonText></IonText>

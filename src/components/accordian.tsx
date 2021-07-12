@@ -1,6 +1,6 @@
 import React from "react";
 import "./accordian.css";
-import Header from '../layout/Header';
+
 
 export interface MyAccordionProps {
     list: Array<any>;

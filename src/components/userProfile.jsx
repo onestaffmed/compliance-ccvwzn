@@ -7,6 +7,7 @@ import { faPenSquare } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react';
 
 import MyAccordion from "../components/accordian";
+import { withRouter } from "react-router";
 
 
 const UserProfile = () => {
@@ -159,8 +160,8 @@ const UserProfile = () => {
                                                 <div style={{ padding: 6 }}>
                                                     <IonButton
                                                         className="ion-float-right"
-                                                        style={{ zoom: 0.9 }}
-                                                        onClick={() => alert("Item Clicked " + item.email)}
+                                                        style={{ zoom: 0.9, color: 'white' }}
+                                                        href='/licensetest'
                                                     >
                                                         VIEW
                                                     </IonButton>
@@ -206,7 +207,7 @@ const UserProfile = () => {
                                                 <div style={{ padding: 6 }}>
                                                     <IonButton
                                                         className="ion-float-right"
-                                                        style={{ zoom: 0.9 }}
+                                                        style={{ zoom: 0.9, color: 'white' }}
                                                         onClick={() => alert("Item Clicked " + item.email)}
                                                     >
                                                         VIEW
@@ -266,7 +267,7 @@ const UserProfile = () => {
                                                 <div style={{ padding: 6 }}>
                                                     <IonButton
                                                         className="ion-float-right"
-                                                        style={{ zoom: 0.9 }}
+                                                        style={{ zoom: 0.9, color: 'white' }}
                                                         onClick={() => alert("Item Clicked " + item.email)}
                                                     >
                                                         VIEW
@@ -315,7 +316,7 @@ const UserProfile = () => {
                                                 <div style={{ padding: 6 }}>
                                                     <IonButton
                                                         className="ion-float-right"
-                                                        style={{ zoom: 0.9 }}
+                                                        style={{ zoom: 0.9, color: 'white' }}
                                                         onClick={() => alert("Item Clicked " + item.email)}
                                                     >
                                                         VIEW

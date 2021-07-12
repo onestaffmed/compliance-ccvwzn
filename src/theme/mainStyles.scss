@@ -4,6 +4,11 @@
 @use 'landing'as *;
 @use 'profile'as *;
 
+.header-md::after {
+    background: none;
+
+}
+
 .landingText {
     color: color(primary);
 }
