@@ -1,0 +1,21 @@
+{
+    "education": [{
+            "id": 1,
+            "school": "UNMC",
+            "state": "Nebraska",
+            "city": "Omaha",
+            "degree": "Bachelor of Science",
+            "study": "Nursing"
+
+        },
+        {
+            "id": 2,
+            "school": "Iowa Western CC",
+            "state": "Iowa",
+            "city": "Council Bluffs",
+            "degree": "Associate",
+            "study": "Nursng"
+
+        }
+    ]
+}

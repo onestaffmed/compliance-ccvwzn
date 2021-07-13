@@ -9,7 +9,8 @@ import { useEffect, useState } from 'react';
 import MyAccordion from "../components/accordian";
 import { withRouter } from "react-router";
 import AllLicenses from "./profileBuilder/licenses/allLicenses";
-import { getAllLicenses } from '../utils/api';
+import { getAllLicenses, getAllEdu } from '../utils/api';
+
 
 const UserProfile = () => {
     var users = {
@@ -24,7 +25,7 @@ const UserProfile = () => {
     };
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch("https://randomuser.me/api/?results=5")
+        fetch("https://randomuser.me/api/?results=3")
             .then((r) => r.json())
             .then((d) => setData(d.results));
     }, []);
@@ -34,6 +35,14 @@ const UserProfile = () => {
     useEffect(() => {
         getAllLicenses()
             .then(({ data: licenses }) => setLicense(licenses))
+            .catch((err) => console.log(err));
+    }, []);
+
+    const [education, setEducation] = useState([]);
+
+    useEffect(() => {
+        getAllEdu()
+            .then(({ data: education }) => setEducation(education))
             .catch((err) => console.log(err));
     }, []);
 
@@ -100,21 +109,43 @@ const UserProfile = () => {
                                 </IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent>
+                                <MyAccordion
+                                    list={data}
+                                    renderHeader={(item) => {
+                                        return (
+                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+                                                {item.name.first} {item.name.last}
+                                            </span>
+                                        );
+                                    }}
+                                    renderPanel={(item) => {
+                                        return (
+                                            <div>
+                                                <IonItem style={{ "--padding-start": 0 }}>
 
-                                <p>Name</p>
-                                <p>Address</p>
-                                <p>Phone</p>
-                                <p>Email</p>
-                                <br />
-                                <p>Name</p>
-                                <p>Address</p>
-                                <p>Phone</p>
-                                <p>Email</p>
-                                <br />
-                                <p>Name</p>
-                                <p>Address</p>
-                                <p>Phone</p>
-                                <p>Email</p>
+                                                    <IonLabel>
+                                                        <div>
+                                                            <p>
+                                                                {" "}
+                                                                {item.location.street.number} {item.location.street.name}<br />
+                                                                {item.location.city}, {item.location.state} {item.location.postcode}<br />
+                                                            </p>
+                                                            <p>
+                                                                <strong>Email:</strong> {item.email} <br />
+                                                                <strong>Phone:</strong> {item.phone}<br />
+                                                                <strong>Mobile:</strong> {item.cell}
+                                                            </p>
+                                                        </div>
+                                                        {/* <div className="ion-text-wrap">{item.body}</div> */}
+                                                    </IonLabel>
+                                                </IonItem>
+                                                <div style={{ padding: 6 }}>
+
+                                                </div>
+                                            </div>
+                                        );
+                                    }}
+                                />
                                 {/* <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div> */}
                             </IonCardContent>
 
@@ -144,14 +175,14 @@ const UserProfile = () => {
                             <IonCardContent>
                                 <MyAccordion
                                     list={licenses}
-                                    renderHeader={(item: any) => {
+                                    renderHeader={(item) => {
                                         return (
                                             <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
                                                 {item.state} <br /> {item.type}
                                             </span>
                                         );
                                     }}
-                                    renderPanel={(item: any) => {
+                                    renderPanel={(item) => {
                                         return (
                                             <div>
                                                 <IonItem style={{ "--padding-start": 0 }}>
@@ -195,11 +226,11 @@ const UserProfile = () => {
                             </IonCardHeader>
                             <IonCardContent>
                                 <MyAccordion
-                                    list={data}
+                                    list={education}
                                     renderHeader={(item) => {
                                         return (
                                             <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                {item.name.first} {item.name.last}
+                                                Degree: {item.degree} <br /> Area of Study :{item.study}
                                             </span>
                                         );
                                     }}
@@ -211,19 +242,19 @@ const UserProfile = () => {
                                                     <IonLabel>
                                                         <div>
                                                             {" "}
-                                                            {item.location.city} {item.location.state}
+                                                            School: {item.school}
                                                         </div>
-                                                        <div> {item.location.country}</div>
+                                                        <div> Location: {item.city}, {item.state}</div>
                                                         {/* <div className="ion-text-wrap">{item.body}</div> */}
                                                     </IonLabel>
                                                 </IonItem>
                                                 <div style={{ padding: 6 }}>
                                                     <IonButton
                                                         className="ion-float-right"
-                                                        style={{ zoom: 0.9, color: 'white' }}
-                                                        onClick={() => alert("Item Clicked " + item.email)}
+                                                        style={{ zoom: 0.9 }}
+                                                        href='/education'
                                                     >
-                                                        VIEW
+                                                        EDIT
                                                     </IonButton>
                                                 </div>
                                             </div>
