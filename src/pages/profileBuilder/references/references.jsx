@@ -1,4 +1,4 @@
-import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonAvatar, IonGrid, IonRow, IonCol, IonItemDivider, IonHeader, IonToolbar, IonLabel, IonItem, IonImg, IonButton } from "@ionic/react";
+import { IonLabel, IonItem } from "@ionic/react";
 import { useEffect, useState } from 'react';
 import MyAccordion from "../../../components/accordian";
 

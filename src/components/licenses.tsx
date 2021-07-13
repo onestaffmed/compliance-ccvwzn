@@ -13,6 +13,7 @@ import Header from '../layout/Header';
 import ExpiringLicense from "../pages/profileBuilder/licenses/expiringLicenses";
 import ActiveLicense from "../pages/profileBuilder/licenses/activeLicense";
 import MissingLicense from "../pages/profileBuilder/licenses/missingLicenses";
+import LicenseLoad from "../pages/profileBuilder/licenses/licenseLoad";
 
 
 const LicenseTest: React.FC = () => {
@@ -40,6 +41,7 @@ const LicenseTest: React.FC = () => {
                             </IonCol>
                         </IonRow>
                     </IonGrid>
+                    <LicenseLoad />
                 </div>
             </IonContent>
         </IonPage>

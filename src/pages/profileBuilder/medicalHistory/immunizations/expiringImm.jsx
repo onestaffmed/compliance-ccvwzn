@@ -2,20 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import {
     IonButton,
-    IonContent,
-    IonHeader,
     IonItem,
     IonLabel,
-    IonPage,
-    IonTitle,
-    IonToolbar,
     IonCard,
     IonCardTitle,
     IonCardContent,
-    IonGrid,
-    IonRow,
-    IonCol,
-    IonList
 
 } from "@ionic/react";
 

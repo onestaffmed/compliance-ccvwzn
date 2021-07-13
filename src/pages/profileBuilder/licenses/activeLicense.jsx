@@ -1,25 +1,17 @@
 import { useEffect, useState } from 'react';
 import {
     IonButton,
-    IonContent,
-    IonHeader,
     IonItem,
     IonLabel,
-    IonPage,
-    IonTitle,
-    IonToolbar,
     IonCard,
     IonCardTitle,
     IonCardContent,
-    IonGrid,
-    IonRow,
-    IonCol,
-    IonList
 
 } from "@ionic/react";
 
 import MyAccordion from "../../../components/accordian";
 import { getAllLicenses } from '../../../utils/api';
+// import LicenseLoad from './licenseLoad';
 
 const ActiveLicense = () => {
     const [licenses, setLicense] = useState([]);
@@ -72,7 +64,10 @@ const ActiveLicense = () => {
                     />
                 </IonCardContent>
             </IonCard>
+            {/* <LicenseLoad /> */}
         </>
+
+
     );
 };
 

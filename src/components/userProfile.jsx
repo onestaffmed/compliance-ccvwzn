@@ -1,6 +1,4 @@
-import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonAvatar, IonGrid, IonRow, IonCol, IonItemDivider, IonHeader, IonToolbar, IonLabel, IonItem, IonImg, IonButton } from "@ionic/react";
-
-import MedicalHistory from '../pages/profileBuilder/medicalHistory/medicalHistory';
+import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonAvatar, IonGrid, IonRow, IonCol, IonItemDivider, IonToolbar, IonLabel, IonItem, IonButton } from "@ionic/react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenSquare } from '@fortawesome/free-solid-svg-icons';
@@ -164,27 +162,21 @@ const UserProfile = () => {
                     </IonCol>
 
                     <IonCol>
-                        <IonCard className="cardTransparent">
-                            <IonCardHeader>
-                                <IonCardTitle>
-                                    Licenses
-                                    <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div>
-                                </IonCardTitle>
-                            </IonCardHeader>
-                            <IonCardContent>
-                                <IonGrid>
-                                    <IonRow>
-                                        <IonCol><ExpiringLicense /></IonCol>
-                                        <IonCol><MissingLicense /></IonCol>
-                                    </IonRow>
-                                    <IonRow><IonCol><ActiveLicense /></IonCol></IonRow>
 
-                                </IonGrid>
+                        <IonCardHeader>
+                            <IonCardTitle>
+                                Licenses
+                                <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div>
+                            </IonCardTitle>
+                        </IonCardHeader>
+                        <IonGrid>
+                            <IonRow>
+                                <IonCol><ExpiringLicense /></IonCol>
+                                <IonCol><MissingLicense /></IonCol>
+                            </IonRow>
+                            <IonRow><IonCol><ActiveLicense /></IonCol></IonRow>
 
-                            </IonCardContent>
-
-                        </IonCard>
-
+                        </IonGrid>
 
 
                         <IonItemDivider color="secondary"></IonItemDivider>
@@ -263,25 +255,26 @@ const UserProfile = () => {
 
                         <IonItemDivider color="primary"></IonItemDivider>
 
-                        <IonCard className="cardTransparent">
-                            <IonCardHeader>
-                                <IonCardTitle>
-                                    Medical History
-                                    <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div>
-                                </IonCardTitle>
-                            </IonCardHeader>
 
-                            <IonGrid>
-                                <IonRow>
-                                    <IonCol><ExpiringImm /></IonCol>
-                                    <IonCol><MissingImm /></IonCol>
-                                </IonRow>
-                                <IonRow><IonCol><ActiveImm /></IonCol></IonRow>
-
-                            </IonGrid>
+                        <IonCardHeader>
+                            <IonCardTitle>
+                                Medical History
+                                <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div>
+                            </IonCardTitle>
+                        </IonCardHeader>
 
 
-                        </IonCard>
+
+
+
+                        <IonGrid>
+                            <IonRow>
+                                <IonCol><ExpiringImm /></IonCol>
+                                <IonCol><MissingImm /></IonCol>
+                            </IonRow>
+                            <IonRow><IonCol><ActiveImm /></IonCol></IonRow>
+
+                        </IonGrid>
                     </IonCol>
                 </IonRow>
             </IonGrid>

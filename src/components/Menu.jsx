@@ -15,10 +15,10 @@ import {
 } from '@ionic/react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenSquare, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, heartOutline, heartSharp, personCircleOutline, home, homeSharp, mailUnreadOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, documentAttachOutline, documentAttachSharp } from 'ionicons/icons';
+import { personCircleOutline, home, homeSharp, mailUnreadOutline, documentAttachOutline, documentAttachSharp } from 'ionicons/icons';
 import Footer from '../layout/Footer';
 
 var appPages = [

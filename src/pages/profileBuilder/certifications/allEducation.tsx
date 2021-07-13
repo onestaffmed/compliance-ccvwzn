@@ -14,7 +14,6 @@ import {
     IonGrid,
     IonRow,
     IonCol,
-    IonList
 
 } from "@ionic/react";
 
@@ -23,13 +22,13 @@ import { getAllEdu } from '../../../utils/api';
 // import Search from '../components/Search/Search';
 import Header from '../../../layout/Header';
 
-const AllEducation: React.FC = () => {
+const AllCerts: React.FC = () => {
 
-    const [education, setEducation] = useState<Array<any>>([]);
+    const [certification, setCertification] = useState<Array<any>>([]);
 
     useEffect(() => {
         getAllEdu()
-            .then(({ data: education }) => setEducation(education))
+            .then(({ data: certification }) => setCertification(certification))
             .catch((err) => console.log(err));
     }, []);
 
@@ -39,7 +38,7 @@ const AllEducation: React.FC = () => {
     //         .then((d) => setLicense(d.results));
     // }, []);
 
-    console.log(education);
+    console.log(certification);
 
     return (
         <IonPage>
@@ -56,11 +55,11 @@ const AllEducation: React.FC = () => {
                                     <IonCardContent>
 
                                         <MyAccordion
-                                            list={education}
+                                            list={certification}
                                             renderHeader={(item: any) => {
                                                 return (
                                                     <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                        Degree: {item.degree} <br /> Area of Study: {item.study}
+                                                        Cerification: {item.degree} <br /> Area of Study: {item.study}
                                                     </span>
                                                 );
                                             }}
@@ -118,4 +117,4 @@ const AllEducation: React.FC = () => {
 };
 
 
-export default AllEducation;
+export default AllCerts;
