@@ -18,7 +18,7 @@ import {
 
 } from "@ionic/react";
 
-import MyAccordion from "../../accordian";
+import MyAccordion from "../../../components/accordian";
 import License from "../licenses/license";
 import { getAllLicenses } from '../../../utils/api';
 // import Search from '../components/Search/Search';
@@ -48,7 +48,7 @@ const AllEducation: React.FC = () => {
 
             <IonContent fullscreen className="ion-padding">
                 <div className="profileContainer">
-                    <IonToolbar><IonHeader><IonTitle color="primary">Licenses</IonTitle></IonHeader></IonToolbar>
+                    <IonToolbar><IonHeader><IonTitle color="primary">Education</IonTitle></IonHeader></IonToolbar>
 
                     <IonGrid>
                         <IonRow>
@@ -61,7 +61,7 @@ const AllEducation: React.FC = () => {
                                             renderHeader={(item: any) => {
                                                 return (
                                                     <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                        Degree: {item.degree} <br /> Area of Study :{item.study}
+                                                        Degree: {item.degree} <br /> Area of Study: {item.study}
                                                     </span>
                                                 );
                                             }}

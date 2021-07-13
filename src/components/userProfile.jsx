@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 
 import MyAccordion from "../components/accordian";
 import { withRouter } from "react-router";
-import AllLicenses from "./profileBuilder/licenses/allLicenses";
+import AllLicenses from "../pages/profileBuilder/licenses/allLicenses";
 import { getAllLicenses, getAllEdu } from '../utils/api';
 
 
@@ -177,8 +177,10 @@ const UserProfile = () => {
                                     list={licenses}
                                     renderHeader={(item) => {
                                         return (
-                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                {item.state} <br /> {item.type}
+                                            <span style={{ textTransform: "uppercase" }}>
+                                                <p style={{ fontWeight: "bold", }}>
+                                                    {item.state} {item.type}
+                                                </p>
                                             </span>
                                         );
                                     }}
@@ -229,8 +231,10 @@ const UserProfile = () => {
                                     list={education}
                                     renderHeader={(item) => {
                                         return (
-                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                Degree: {item.degree} <br /> Area of Study :{item.study}
+                                            <span style={{ textTransform: "uppercase" }}>
+                                                <p>                                                <strong>Degree:</strong> {item.degree} <br />
+                                                    <strong>Area of Study:</strong> {item.study}
+                                                </p>
                                             </span>
                                         );
                                     }}

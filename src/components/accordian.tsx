@@ -1,5 +1,4 @@
 import React from "react";
-import "./accordian.css";
 
 
 export interface MyAccordionProps {

@@ -7,7 +7,8 @@ import Home from './pages/Home.jsx';
 import Profile from './pages/profile.jsx';
 import Header from './layout/Header';
 import LicenseTest from './components/licenses';
-import AllLicenses from './components/profileBuilder/licenses/allLicenses';
+import AllLicenses from './pages/profileBuilder/licenses/allLicenses';
+import AllEducation from './pages/profileBuilder/education/allEducation';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/profile" component={Profile} exact={true} />
             <Route path="/licensetest" component={LicenseTest} exact={true} />
             <Route path="/alllicenses" component={AllLicenses} exact={true} />
+            <Route path="/education" component={AllEducation} exact={true} />
 
           </IonRouterOutlet>
         </IonSplitPane>
