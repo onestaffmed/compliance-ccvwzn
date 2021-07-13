@@ -13,13 +13,11 @@ import {
     IonCardContent,
     IonGrid,
     IonRow,
-    IonCol,
-    IonList
-
+    IonCol
 } from "@ionic/react";
 
 import MyAccordion from "../../../components/accordian";
-import License from "./license";
+
 import { getAllLicenses } from '../../../utils/api';
 // import Search from '../components/Search/Search';
 import Header from '../../../layout/Header';
@@ -31,6 +29,7 @@ const AllLicenses: React.FC = () => {
     useEffect(() => {
         getAllLicenses()
             .then(({ data: licenses }) => setLicense(licenses))
+
             .catch((err) => console.log(err));
     }, []);
 

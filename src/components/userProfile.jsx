@@ -1,5 +1,6 @@
 import { IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonAvatar, IonGrid, IonRow, IonCol, IonItemDivider, IonHeader, IonToolbar, IonLabel, IonItem, IonImg, IonButton } from "@ionic/react";
 
+import MedicalHistory from '../pages/profileBuilder/medicalHistory/medicalHistory';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenSquare } from '@fortawesome/free-solid-svg-icons'
@@ -7,8 +8,7 @@ import { faPenSquare } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react';
 
 import MyAccordion from "../components/accordian";
-import { withRouter } from "react-router";
-import AllLicenses from "../pages/profileBuilder/licenses/allLicenses";
+
 import { getAllLicenses, getAllEdu } from '../utils/api';
 
 
@@ -35,6 +35,8 @@ const UserProfile = () => {
     useEffect(() => {
         getAllLicenses()
             .then(({ data: licenses }) => setLicense(licenses))
+            .then((r) => r.json())
+            .then((d) => setData(d.results))
             .catch((err) => console.log(err));
     }, []);
 
@@ -383,9 +385,7 @@ const UserProfile = () => {
                                     <div className="profileEditIcon"><FontAwesomeIcon icon={faPenSquare} color="orange" /></div>
                                 </IonCardTitle>
                             </IonCardHeader>
-                            <IonCardContent>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi nam blanditiis ducimus expedita? Animi, libero facere sed quos odit repudiandae voluptatum sequi cum est maxime, qui explicabo, architecto incidunt.</p>
-                            </IonCardContent>
+                            <MedicalHistory />
                         </IonCard>
                     </IonCol>
                 </IonRow>
