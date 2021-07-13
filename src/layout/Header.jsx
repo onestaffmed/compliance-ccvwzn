@@ -1,4 +1,4 @@
-import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonImg } from '@ionic/react';
+import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonImg, IonTitle } from '@ionic/react';
 import logoHere from '../images/logohere.png';
 
 // import { useParams } from 'react-router';
@@ -10,8 +10,9 @@ const Header = () => {
         <IonHeader>
             <IonToolbar className="mainToolbar">
                 <IonButtons slot="start">
-                    <IonMenuButton />
+                    <IonMenuButton className="menuHamburger" auto-hide="true" />
                 </IonButtons>
+
                 <IonImg className="logoHere" alt="documents" src={logoHere} />
             </IonToolbar>
         </IonHeader>

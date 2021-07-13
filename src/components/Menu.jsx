@@ -8,14 +8,18 @@ import {
     IonText,
     IonMenu,
     IonMenuToggle,
-
+    IonToolbar,
     IonTitle,
+    IonHeader,
 
 } from '@ionic/react';
 
-import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, heartOutline, heartSharp, personCircleOutline, home, homeSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
+import { useLocation } from 'react-router-dom';
+import { personCircleOutline, home, homeSharp, mailUnreadOutline, documentAttachOutline, documentAttachSharp } from 'ionicons/icons';
+import Footer from '../layout/Footer';
 
 var appPages = [
     {
@@ -31,35 +35,18 @@ var appPages = [
         mdIcon: personCircleOutline
     },
     {
+        title: 'Licenses',
+        url: '/licensetest',
+        iosIcon: documentAttachOutline,
+        mdIcon: documentAttachSharp
+    },
+    {
         title: 'Messages',
-        url: '/page/Messages',
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp
+        url: '/messages',
+        iosIcon: mailUnreadOutline,
+        mdIcon: mailUnreadOutline
     },
-    {
-        title: 'Favorites',
-        url: '/page/Favorites',
-        iosIcon: heartOutline,
-        mdIcon: heartSharp
-    },
-    {
-        title: 'Archived',
-        url: '/page/Archived',
-        iosIcon: archiveOutline,
-        mdIcon: archiveSharp
-    },
-    {
-        title: 'Trash',
-        url: '/page/Trash',
-        iosIcon: trashOutline,
-        mdIcon: trashSharp
-    },
-    {
-        title: 'Spam',
-        url: '/page/Spam',
-        iosIcon: warningOutline,
-        mdIcon: warningSharp
-    }
+
 ];
 
 export const Menu = () => {
@@ -73,15 +60,20 @@ export const Menu = () => {
     }
     return (
         <>
-            <IonMenu contentId="main" type="reveal">
+            <IonMenu contentId="main" type="reveal" className="menu">
 
                 <IonContent className={styles.bkground}>
-                    <IonTitle>Welcome Traveler!</IonTitle>
+                    <IonHeader>
+                        <IonToolbar className={styles.itembkground} >
+                            <IonTitle className='menuWelcome'>Welcome Traveler!</IonTitle>
+                            <div className="profileEditIcon"><FontAwesomeIcon icon={faSignInAlt} color="orange" /></div>
+                        </IonToolbar>
+                    </IonHeader>
                     <IonText></IonText>
                     <IonList className={styles.bkground}>
                         {appPages.map((appPage, index) => {
                             return (
-                                <IonMenuToggle key={index} autoHide={false}>
+                                <IonMenuToggle key={index} autoHide={false} >
 
                                     <IonItem className={`${styles.itembkground} ${location.pathname === appPage.url ? 'selected' : ''}`} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
                                         <IonIcon slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
@@ -92,6 +84,7 @@ export const Menu = () => {
                         })}
                     </IonList>
                 </IonContent>
+                <Footer />
             </IonMenu>
 
 

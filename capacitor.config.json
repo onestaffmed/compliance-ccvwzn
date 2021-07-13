@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "compliance.test.osm",
 	"appName": "Compliance",
 	"webDir": "build",
 	"bundledWebRuntime": false

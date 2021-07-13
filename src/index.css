@@ -118,6 +118,24 @@ http://ionicframework.com/docs/theming/ */
   --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
 }
 
+.toolbar-title {
+  overflow: show;
+}
+
+.menuHamburger {
+  --color: var(--ion-color-primary) !important;
+}
+.menuHamburger:hover {
+  --color: white !important;
+  opacity: 1;
+  --background-hover-opacity: .5;
+  --background-hover: var(--ion-color-secondary) !important;
+}
+
+.menu {
+  --side-max-width: 30%;
+}
+
 .itemBackground {
   --background: transparent;
 }
@@ -125,10 +143,6 @@ http://ionicframework.com/docs/theming/ */
 .list-md {
   --background: none !important;
   color: gray;
-}
-
-ion-label {
-  color: lightgray;
 }
 
 ion-menu.md ion-content {
@@ -164,7 +178,6 @@ ion-menu.md ion-list#inbox-list ion-list-header {
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
   margin-bottom: 18px;
-  color: #757575;
   min-height: 26px;
 }
 
@@ -211,11 +224,11 @@ ion-menu.ios ion-item {
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: #262626;
 }
 
 ion-menu.ios ion-item .selected ion-icon {
-  color: var(--ion-color-primary);
+  --color: white !important;
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {
@@ -240,11 +253,35 @@ ion-note {
 
 ion-item.selected {
   --color: #fff;
+  --background: var(--ion-color-secondary) !important;
+  font-weight: 600;
+}
+
+ion-icon.selected {
+  --color: white;
 }
 
 ion-list {
   margin-left: 50px;
   display: inherit;
+}
+
+.backgroundImage {
+  background-image: url("/src/images/background/landing_background.png");
+  background-size: cover;
+  margin: 0;
+}
+
+.headerCard {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  color: #34495e !important;
+}
+.headerCard__title {
+  background-color: transparent !important;
+  color: #34495e !important;
+  padding: 0;
 }
 
 .heroMain {
@@ -263,31 +300,36 @@ ion-list {
 
 .landingText {
   color: white;
-  font-weight: 600;
+  color: #34495e;
+  font-weight: 500;
 }
 
-.cardOne {
-  --background: var(--ion-color-primary-tint);
-  --color: white;
+.cardTransparent {
+  color: #34495e;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  --background: transparent;
 }
 
 .cardTwo {
   --background: var(--ion-color-secondary);
-  --color: white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+  border: none;
 }
 
 .headerImage {
-  --background: orange !important;
-  height: 100px;
+  --background-color: orange !important;
   padding: 10px;
 }
 
-.mainToolbar {
-  --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
-}
-
-ion-title {
+.menuWelcome {
   color: white;
+  word-wrap: normal;
+  font-size: 20px;
+  text-align: left;
+  padding: 20px;
 }
 
 .logoHere {
@@ -296,7 +338,89 @@ ion-title {
   width: 20%;
 }
 
+.profileContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 200px) and (max-width: 1023px) {
+  .profileContainer {
+    width: 100%;
+  }
+}
+
+.profileEditIcon {
+  text-align: right !important;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #fff;
+  color: #34495e;
+  cursor: pointer;
+  padding: 18px;
+  margin: 2px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #1abc9c;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.header-md::after {
+  background: none;
+}
+
+.mainToolbar {
+  --background: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-image: none;
+}
+
 .footer {
-  --background: darkgray;
+  --background: linear-gradient(333deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+  padding-bottom: 10px;
+  border: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ion-align-self-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0;
+}
+
+.mainContainer {
+  width: 80%;
+}
+
+.cardPrimary {
+  color: #34495e;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  --background: color(primary);
 }
 /*# sourceMappingURL=index.css.map */

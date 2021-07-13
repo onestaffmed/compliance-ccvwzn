@@ -6,6 +6,10 @@ import Menu from './components/menu';
 import Home from './pages/Home.jsx';
 import Profile from './pages/profile.jsx';
 import Header from './layout/Header';
+import LicenseTest from './components/licenses';
+import AllEducation from './pages/profileBuilder/education/allEducation';
+import AllMedicalHistory from './pages/profileBuilder/medicalHistory/allMedicalHistory';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,18 +34,22 @@ const App = () => {
   return (
     <IonApp>
       <IonReactRouter>
-        <IonSplitPane when="md" contentId="main" >
+        <IonSplitPane when="(max-width:40px)" contentId="main" >
           <Menu />
           <IonRouterOutlet id="main">
             <Header />
             <Route path="/home" exact={true} component={Home} />
             <Route exact path="/" render={() => <Redirect to="/home" />} />
-
             <Route path="/profile" component={Profile} exact={true} />
+            <Route path="/licensetest" component={LicenseTest} exact={true} />
+            <Route path="/education" component={AllEducation} exact={true} />
+            <Route path="/medicalhistory" component={AllMedicalHistory} exact={true} />
+
 
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
+
     </IonApp>
   );
 };

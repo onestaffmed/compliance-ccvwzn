@@ -1,13 +1,59 @@
 @use 'colors'as *;
 @use 'variables'as *;
-@use '../components/Menu'as *;
+@use 'Menu'as *;
 @use 'landing'as *;
+@use 'profile'as *;
+@use 'accordian'as *;
+
+.header-md::after {
+    background: none;
+
+}
 
 .landingText {
     color: color(primary);
 }
 
+.mainToolbar {
+    // --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+    --background: white;
+    box-shadow: none;
+    background-image: none;
+
+
+}
+
 .footer {
-    // --background: linear-gradient(333deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
-    --background: darkgray;
+    --background: linear-gradient(333deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+    // --background: transparent;
+    padding-bottom: 10px;
+    border: 0;
+
+
+}
+
+.container {
+    width: 80%;
+
+    margin: 0 auto;
+
+}
+
+.ion-align-self-center {
+    align-self: center;
+    padding: 0;
+}
+
+.mainContainer {
+    width: 80%;
+}
+
+.cardPrimary {
+    // --background: var(--ion-color-primary-tint);
+    color: color(alternate);
+    // box-shadow: 0 8px 6px -6px black;
+    border: none;
+    box-shadow: none;
+    --background: color(primary);
+
 }

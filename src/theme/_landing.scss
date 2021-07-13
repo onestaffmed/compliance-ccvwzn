@@ -1,6 +1,29 @@
 @use 'colors'as *;
 @use 'variables'as *;
 
+.backgroundImage {
+    background-image: url("/src/images/background/landing_background.png");
+    background-size: cover;
+    margin: 0;
+}
+
+.headerCard {
+    // padding-top: 20px;
+    box-shadow: none;
+    background-color: transparent;
+    // margin: 0px 60px 10px;
+    color: color(alternate) !important;
+
+    &__title {
+        background-color: transparent !important;
+        color: color(alternate) !important;
+        // font-size: 2.5rem;
+        padding: 0;
+
+    }
+
+}
+
 .heroMain {
     height: 200px;
 }
@@ -12,31 +35,48 @@
 
 .landingText {
     color: white;
-    font-weight: 600;
+    color: color(alternate);
+    font-weight: 500;
 }
 
-.cardOne {
-    --background: var(--ion-color-primary-tint);
-    --color: white;
+.cardTransparent {
+    // --background: var(--ion-color-primary-tint);
+    color: color(alternate);
+    // box-shadow: 0 8px 6px -6px black;
+    border: none;
+    box-shadow: none;
+    --background: transparent;
+
 }
+
+// .cardOne {
+//     --background: var(--ion-color-primary-tint);
+//     --color: white;
+//     box-shadow: 0 8px 6px -6px black;
+
+// }
 
 .cardTwo {
     --background: var(--ion-color-secondary);
-    --color: white;
+    // --color: white;
+    box-shadow: 0 8px 6px -6px black;
+    border: none;
 }
 
 .headerImage {
-    --background: orange !important;
-    height: 100px;
+    --background-color: orange !important;
+
     padding: 10px;
 }
 
-.mainToolbar {
-    --background: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
-}
 
-ion-title {
+
+.menuWelcome {
     color: white;
+    word-wrap: normal;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px;
 }
 
 .logoHere {
@@ -44,3 +84,7 @@ ion-title {
     float: right;
     width: 20%;
 }
+
+// .heroButton {
+//     align-self: center;
+// }
