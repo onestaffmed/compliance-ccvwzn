@@ -387,6 +387,15 @@ ion-list {
   width: 60%;
   margin: 0 auto;
 }
+@media (min-width: 200px) and (max-width: 1023px) {
+  .licenseForm {
+    width: 100%;
+  }
+}
+
+.backgroundColor {
+  --ion-background-color: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
+}
 
 .header-md::after {
   background: none;
@@ -422,10 +431,6 @@ ion-list {
 }
 
 .cardPrimary {
-  color: #34495e;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  --background: color(primary);
+  --ion-background-color: white;
 }
 /*# sourceMappingURL=index.css.map */

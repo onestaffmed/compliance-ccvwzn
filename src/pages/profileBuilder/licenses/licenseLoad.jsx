@@ -73,7 +73,7 @@ const LicenseLoad = () => {
         <>
             <IonHeader><IonTitle>Upload License</IonTitle></IonHeader>
             <div className="ion-padding licenseForm">
-                <IonCard className="ion-padding">
+                <IonCard className="ion-padding cardPrimary">
                     <form onSubmit={submit}>
 
                         <IonItem lines="none">

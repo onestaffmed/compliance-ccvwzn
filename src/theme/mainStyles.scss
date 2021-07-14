@@ -5,6 +5,7 @@
 @use 'profile'as *;
 @use 'accordian'as *;
 @use 'license'as *;
+@use 'mixins'as *;
 
 .header-md::after {
     background: none;
@@ -50,11 +51,15 @@
 }
 
 .cardPrimary {
-    // --background: var(--ion-color-primary-tint);
-    color: color(alternate);
-    // box-shadow: 0 8px 6px -6px black;
-    border: none;
-    box-shadow: none;
-    --background: color(primary);
+
+    --ion-background-color: white;
+    // @include desktop {
+    //     // --background: var(--ion-color-primary-tint);
+    //     color: color(alternate);
+    //     // box-shadow: 0 8px 6px -6px black;
+    //     border: none;
+    //     box-shadow: none;
+    //     --background: color(primary);
+    // }
 
 }

@@ -65,7 +65,7 @@ const CertLoad = () => {
         <>
 
             <div className="ion-padding licenseForm">
-                <IonCard className="ion-padding">
+                <IonCard className="ion-padding cardPrimary">
                     <IonTitle>Upload Certification</IonTitle>
                     <form onSubmit={submit}>
 

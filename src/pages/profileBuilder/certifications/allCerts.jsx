@@ -35,35 +35,36 @@ const AllCerts = () => {
 
 
     return (
-        <IonPage>
-            <Header />
+        <div className="backgroundColor">
+            <IonPage>
+                <Header />
 
-            <IonContent fullscreen className="ion-padding">
-                <div className="profileContainer">
-                    <IonToolbar><IonHeader><IonTitle color="primary">Certifcations</IonTitle></IonHeader></IonToolbar>
+                <IonContent fullscreen className="ion-padding">
+                    <div className="profileContainer">
+                        <IonHeader><IonTitle color="white">Certifcations</IonTitle></IonHeader>
 
-                    <IonGrid>
-                        <IonRow>
-                            <IonCol>
+                        <IonGrid>
+                            <IonRow>
+                                <IonCol>
 
-                                <MissingCerts />
+                                    <MissingCerts />
 
-                            </IonCol>
-                            <IonCol>
-                                <ExpiringCerts />
-                            </IonCol>
-                            <IonCol>
-                                <ActiveCerts />
-                            </IonCol>
-                        </IonRow>
+                                </IonCol>
+                                <IonCol>
+                                    <ExpiringCerts />
+                                </IonCol>
+                                <IonCol>
+                                    <ActiveCerts />
+                                </IonCol>
+                            </IonRow>
 
 
-                    </IonGrid>
-                </div>
-                <CertLoad />
-            </IonContent>
-        </IonPage>
-
+                        </IonGrid>
+                    </div>
+                    <CertLoad />
+                </IonContent>
+            </IonPage>
+        </div>
 
     );
 };
