@@ -39,7 +39,7 @@ const UserProfile = () => {
         <div className="profileContainer">
 
             <IonToolbar>
-                Profile T
+                Profile Test
             </IonToolbar>
 
 

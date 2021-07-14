@@ -383,6 +383,11 @@ ion-list {
   transition: max-height 0.2s ease-out;
 }
 
+.licenseForm {
+  width: 60%;
+  margin: 0 auto;
+}
+
 .header-md::after {
   background: none;
 }

@@ -45,5 +45,13 @@
             "study": "Nursng"
         }
     ],
-    "certifications": []
+    "certifications": [
+
+        {
+            "certification": "CPR",
+            "expiration": "2021-07-14T14:18:49.692-05:00",
+            "type": "",
+            "id": 4
+        }
+    ]
 }

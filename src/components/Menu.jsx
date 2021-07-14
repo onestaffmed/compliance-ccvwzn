@@ -41,6 +41,12 @@ var appPages = [
         mdIcon: documentAttachSharp
     },
     {
+        title: 'Certifications',
+        url: '/certifications',
+        iosIcon: documentAttachOutline,
+        mdIcon: documentAttachSharp
+    },
+    {
         title: 'Messages',
         url: '/messages',
         iosIcon: mailUnreadOutline,
