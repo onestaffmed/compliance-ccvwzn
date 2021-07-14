@@ -1,6 +1,16 @@
 import Axios from "axios";
 import React, { useState } from "react";
-
+import {
+    IonItem,
+    IonLabel,
+    IonInput,
+    IonSelect,
+    IonSelectOption,
+    IonDatetime,
+    IonButton,
+    IonRadioGroup,
+    IonRadio
+} from "@ionic/react";
 // import { getAllLicenses } from '../../../utils/api';
 
 
@@ -15,8 +25,8 @@ const LicenseLoad = () => {
 
     // const [stateErr, setStateErr] = useState({});
     // const [authorErr, setAuthorErr] = useState({});
-    const loadLicense = `http://345vy.mocklab.io/licenses`;
-
+    // const loadLicense = `http://345vy.mocklab.io/licenses`;
+    const loadLicense = ` http://localhost:3000/licenses`;
 
 
     const submit = (e) => {
@@ -59,56 +69,116 @@ const LicenseLoad = () => {
         <>
 
 
-            <section >
-                <form onSubmit={submit}>
-                    <fieldset>
-                        <label htmlFor="state"> State  </label> <span><input
-                            type="text"
-                            id="state"
-                            name="state"
-                            value={licenseData.state}
-                            onChange={e => setLicenseData({ ...licenseData, state: e.target.value })} /></span> <br />
+            <form className="ion-padding" onSubmit={submit}>
 
-                        <label htmlFor="type">Type </label><span> <input
-                            type="text"
-                            id="type"
-                            name="type"
-                            value={licenseData.type}
-                            onChange={e => setLicenseData({ ...licenseData, type: e.target.value })} /></span><br />
+                <IonItem>
+                    <IonLabel htmlFor="state"> State  </IonLabel>
+                    <IonSelect
+                        type="text"
+                        id="state"
+                        name="state"
+                        placeholder="Select State"
+                        value={licenseData.state}
+                        onChange={e => setLicenseData({ ...licenseData, state: e.target.value })}>
 
-                        <label htmlFor="compact">Is Compact</label><span> <input
-                            id="compact"
-                            name="compact"
-                            value={licenseData.compact}
-                            onChange={e => setLicenseData({ ...licenseData, compact: e.target.value })}></input></span>
-                        <div >
-                            <div >
-                                <label htmlFor="expiration">Expiration Date</label> <span><input
-                                    type="date"
-                                    id="expiration"
-                                    name="expiration"
-                                    value={licenseData.pubdate}
-                                    onChange={e => setLicenseData({ ...licenseData, expiration: e.target.value })} /></span>
-                            </div>
+                        <IonSelectOption value="Alabama">Alabama</IonSelectOption>
+                        <IonSelectOption value="Arizona">Arizona</IonSelectOption>
+                        <IonSelectOption value="Arkansas">Arkansas</IonSelectOption>
+                        <IonSelectOption value="California">California</IonSelectOption>
+                        <IonSelectOption value="Colorado">Colorado</IonSelectOption>
+                        <IonSelectOption value="Connecticut">Connecticut</IonSelectOption>
+                        <IonSelectOption value="Delaware">Delaware</IonSelectOption>
+                        <IonSelectOption value="District Of Columbia">District Of Columbia</IonSelectOption>
+                        <IonSelectOption value="Florida">Florida</IonSelectOption>
+                        <IonSelectOption value="Georgia">Georgia</IonSelectOption>
+                        <IonSelectOption value="Hawaii">Hawaii</IonSelectOption>
+                        <IonSelectOption value="Idaho">Idaho</IonSelectOption>
+                        <IonSelectOption value="Illinois">Illinois</IonSelectOption>
+                        <IonSelectOption value="Indiana">Indiana</IonSelectOption>
+                        <IonSelectOption value="Iowa">Iowa</IonSelectOption>
+                        <IonSelectOption value="Kansas">Kansas</IonSelectOption>
+                        <IonSelectOption value="Kentucky">Kentucky</IonSelectOption>
+                        <IonSelectOption value="Louisiana">Louisiana</IonSelectOption>
+                        <IonSelectOption value="Maine">Maine</IonSelectOption>
+                        <IonSelectOption value="Maryland">Maryland</IonSelectOption>
+                        <IonSelectOption value="Massachusetts">Massachusetts</IonSelectOption>
+                        <IonSelectOption value="Michigan">Michigan</IonSelectOption>
+                        <IonSelectOption value="Minnesota">Minnesota</IonSelectOption>
+                        <IonSelectOption value="Mississippi">Mississippi</IonSelectOption>
+                        <IonSelectOption value="Missouri">Missouri</IonSelectOption>
+                        <IonSelectOption value="Montana">Montana</IonSelectOption>
+                        <IonSelectOption value="Nebraska">Nebraska</IonSelectOption>
+                        <IonSelectOption value="Nevada">Nevada</IonSelectOption>
+                        <IonSelectOption value="New Hampshire">New Hampshire</IonSelectOption>
+                        <IonSelectOption value="New Jersey">New Jersey</IonSelectOption>
+                        <IonSelectOption value="New Mexico">New Mexico</IonSelectOption>
+                        <IonSelectOption value="New York">New York</IonSelectOption>
+                        <IonSelectOption value="North Carolina">North Carolina</IonSelectOption>
+                        <IonSelectOption value="North Dakota">North Dakota</IonSelectOption>
+                        <IonSelectOption value="Ohio">Ohio</IonSelectOption>
+                        <IonSelectOption value="Oklahoma">Oklahoma</IonSelectOption>
+                        <IonSelectOption value="Oregon">Oregon</IonSelectOption>
+                        <IonSelectOption value="Pennsylvania">Pennsylvania</IonSelectOption>
+                        <IonSelectOption value="Rhode Island">Rhode Island</IonSelectOption>
+                        <IonSelectOption value="South Carolina">South Carolina</IonSelectOption>
+                        <IonSelectOption value="South Dakota">South Dakota</IonSelectOption>
+                        <IonSelectOption value="Tennessee">Tennessee</IonSelectOption>
+                        <IonSelectOption value="Texas">Texas</IonSelectOption>
+                        <IonSelectOption value="Utah">Utah</IonSelectOption>
+                        <IonSelectOption value="Vermont">Vermont</IonSelectOption>
+                        <IonSelectOption value="Virginia">Virginia</IonSelectOption>
+                        <IonSelectOption value="Washington">Washington</IonSelectOption>
+                        <IonSelectOption value="West Virginia">West Virginia</IonSelectOption>
+                        <IonSelectOption value="Wisconsin">Wisconsin</IonSelectOption>
+                        <IonSelectOption value="Wyoming">Wyoming</IonSelectOption>
+                    </IonSelect>
+
+                </IonItem>
+
+                <IonItem>
+                    <IonLabel htmlFor="type">Type </IonLabel> <IonInput
+                        type="text"
+                        id="type"
+                        name="type"
+                        value={licenseData.type}
+                        onChange={e => setLicenseData({ ...licenseData, type: e.target.value })} />
+                </IonItem>
+
+                <IonItem>
+                    <IonLabel htmlFor="compact">Is Compact </IonLabel>
+                    <IonRadioGroup
+                        id="compact"
+                        name="compact"
+                        placeholder="Select One"
+                        value={licenseData.compact}
+                        onChange={e => setLicenseData({ ...licenseData, compact: e.target.value })}>
+                        <IonItem><IonLabel>Yes</IonLabel>
+                            <IonRadio value="yes" /></IonItem>
+                        <IonItem><IonLabel>No</IonLabel>
+                            <IonRadio value="no" />
+                        </IonItem>
+                    </IonRadioGroup>
+                </IonItem>
+
+                <IonItem>
+                    <IonLabel htmlFor="expiration">Expiration Date</IonLabel> <span><IonDatetime displayFormat=" MMM DD YYYY" placeholder="Select Date" value={licenseData.expiration} onIonChange={e => setLicenseData({ ...licenseData, expiration: e.target.value })}
+                        id="expiration"
+                        name="expiration"
+                    // value={licenseData.expiration}
+                    // onChange={e => setLicenseData({ ...licenseData, expiration: e.target.value })} 
+                    /></span>
+                </IonItem>
 
 
-                        </div><br />
+                <div className="formbuttons" ><IonButton type="submit">Submit</IonButton>
+                    <IonButton type="reset"
+                        onClick={() => reset()}
+                        value="Cancel">Cancel</IonButton></div>
+
+            </form>
 
 
-                        <br />
-                        <br />
-                        <br />
 
-                        <div className="formbuttons"><button type="submit">Submit</button>
-                            <button type="reset"
-                                onClick={() => reset()}
-                                value="Cancel">Cancel</button></div>
-                    </fieldset>
-
-                </form>
-
-
-            </section>
         </>
 
     );

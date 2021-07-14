@@ -1,0 +1,49 @@
+{
+    "licenses": [{
+            "id": 1,
+            "type": "Registered Nurse",
+            "state": "California",
+            "compact": "No",
+            "expiration": "2022-10-31"
+        },
+        {
+            "id": 2,
+            "type": "Registered Nurse",
+            "state": "Ohio",
+            "compact": "No",
+            "expiration": "2022-10-31"
+        },
+        {
+            "type": "LPN",
+            "state": "Nebraska",
+            "expiration": "2021-12-31",
+            "compact": "No",
+            "id": 3
+        },
+        {
+            "type": "Tele",
+            "state": "Maine",
+            "expiration": "2021-12-31",
+            "compact": "",
+            "id": 4
+        }
+    ],
+    "education": [{
+            "id": 1,
+            "school": "UNMC",
+            "state": "Nebraska",
+            "city": "Omaha",
+            "degree": "Bachelor of Science",
+            "study": "Nursing"
+        },
+        {
+            "id": 2,
+            "school": "Iowa Western CC",
+            "state": "Iowa",
+            "city": "Council Bluffs",
+            "degree": "Associate",
+            "study": "Nursng"
+        }
+    ],
+    "certifications": []
+}
