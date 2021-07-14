@@ -30,7 +30,8 @@ const LicenseLoad = () => {
     // const [stateErr, setStateErr] = useState({});
     // const [authorErr, setAuthorErr] = useState({});
     // const loadLicense = `http://345vy.mocklab.io/licenses`;
-    const loadLicense = ` http://localhost:3000/licenses`;
+    // const loadLicense = ` http://localhost:3000/licenses`;
+    const loadLicense = ` http://10.0.0.127:3000/licenses`;
 
 
     const submit = (e) => {

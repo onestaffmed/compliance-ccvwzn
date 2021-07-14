@@ -7,7 +7,8 @@ export const getUserProfile =() => {
 };
 
 // const userLicenses = `http://345vy.mocklab.io/licenses`;
-const userLicenses = ` http://localhost:3000/licenses`;
+// const userLicenses = ` http://localhost:3000/licenses`;
+const userLicenses = ` http://10.0.0.127:3000/licenses`;
 
 export const getAllLicenses =() => {
     return axios.get(userLicenses);
@@ -15,7 +16,9 @@ export const getAllLicenses =() => {
 };
 
 // const userEducation = `http://345vy.mocklab.io/education`;
-const userEducation = `http://localhost:3000/education`;
+// const userEducation = `http://localhost:3000/education`;
+const userEducation = `http://10.0.0.127:3000/education`;
+
 
 export const getAllEdu =() => {
     return axios.get(userEducation);
@@ -23,7 +26,8 @@ export const getAllEdu =() => {
 };
 
 // const userCerts = `http://345vy.mocklab.io/certifications`;
-const userCerts = `http://localhost:3000/certifications`;
+// const userCerts = `http://localhost:3000/certifications`;
+const userCerts = `http://10.0.0.127:3000/certifications`;
 export const getAllCerts =() => {
     return axios.get(userCerts);
     
