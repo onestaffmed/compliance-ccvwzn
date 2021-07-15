@@ -12,7 +12,7 @@ export const getUserProfile =() => {
 // const userLicenses = ` http://localhost:3000/licenses`;
 
 // ** Demo API
-const userLicenses = ` http://10.103.0.98:3000/licenses`;
+const userLicenses = ` http://10.103.0.98:3000/activelicenses`;
 
 export const getAllLicenses =() => {
     return axios.get(userLicenses);
@@ -25,7 +25,7 @@ export const getAllLicenses =() => {
 // const userEducation = `http://localhost:3000/education`;
 
 // ** Demo API
-const userEducation = `http://10.103.0.98:3000:3000/education`;
+const userEducation = `http://10.103.0.98:3000/education`;
 
 
 export const getAllEdu =() => {
@@ -39,17 +39,27 @@ export const getAllEdu =() => {
 // const userCerts = `http://localhost:3000/certifications`;\
 
 // ** Demo API
-const userCerts = `http://10.103.0.98:3000/certifications`;
+const userCerts = `http://10.103.0.98:3000/activecertifications`;
 export const getAllCerts =() => {
     return axios.get(userCerts);
     
 };
+// ** Demo API
+const missingCerts = `http://10.103.0.98:3000/missingcertifications`;
+export const getAllMissingCerts =() => {
+    return axios.get(missingCerts);
+    
+};
 
-const loadLicense = `http://10.103.0.98:3000/licenses`;
+const loadLicense = `http://10.103.0.98:3000/activelicenses`;
 export const masterLicenses = () => {
     return axios.get(loadLicense);
 };
 
+const expiredLicense = `http://10.103.0.98:3000/expiredlicenses`;
+export const allExpiredLicenses = () => {
+    return axios.get(expiredLicense);
+};
 
 
 // export const updateUserProfile =() => {

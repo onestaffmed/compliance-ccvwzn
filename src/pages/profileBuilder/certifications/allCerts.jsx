@@ -41,7 +41,7 @@ const AllCerts = () => {
 
                 <IonContent fullscreen className="ion-padding">
                     <div className="profileContainer">
-                        <IonHeader><IonTitle color="white">Certifcations</IonTitle></IonHeader>
+                        <IonHeader><IonTitle className="documentHeader">Certifcations</IonTitle></IonHeader>
 
                         <IonGrid>
                             <IonRow>

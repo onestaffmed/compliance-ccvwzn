@@ -10,15 +10,15 @@ import {
 } from "@ionic/react";
 
 import MyAccordion from "../../../components/accordian";
-import { getAllCerts } from '../../../utils/api';
+import { getAllMissingCerts } from '../../../utils/api';
 
 const MissingCerts = () => {
 
     const [certification, setCertification] = useState([]);
 
     useEffect(() => {
-        getAllCerts()
-            .then(({ data: certification }) => setCertification(certification))
+        getAllMissingCerts()
+            .then(({ data: missingCertification }) => setCertification(missingCertification))
             .catch((err) => console.log(err));
     }, []);
     console.log(certification);

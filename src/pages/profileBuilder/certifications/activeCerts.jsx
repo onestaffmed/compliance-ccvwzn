@@ -18,7 +18,7 @@ const ActiveCerts = () => {
 
     useEffect(() => {
         getAllCerts()
-            .then(({ data: certification }) => setCertification(certification))
+            .then(({ data: activeCertification }) => setCertification(activeCertification))
             .catch((err) => console.log(err));
     }, []);
     console.log(certification);

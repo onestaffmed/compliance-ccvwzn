@@ -393,6 +393,10 @@ ion-list {
   }
 }
 
+.documentHeader {
+  --color: white !important;
+}
+
 .backgroundColor {
   --ion-background-color: linear-gradient(166deg, rgba(104, 92, 242, 1) 0%, rgba(98, 197, 230, 1) 50%, rgba(101, 252, 226, 1) 100%);
 }

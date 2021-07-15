@@ -26,7 +26,9 @@ const MissingLicense = () => {
     return (
         <IonCard className="cardPrimary" ><IonCardTitle className="ion-padding" color="danger">Missing</IonCardTitle>
             <IonCardContent>
-                <MyAccordion
+                {/* Demo Code */}
+                <div>None Found</div>
+                {/* <MyAccordion
                     list={licenses}
                     renderHeader={(item) => {
                         return (
@@ -47,7 +49,7 @@ const MissingLicense = () => {
                                             Expiration: {dateFix}
                                         </div>
                                         <div> Is Compact? {item.compact}</div>
-                                        {/* <div className="ion-text-wrap">{item.body}</div> */}
+                                        
                                     </IonLabel>
                                 </IonItem>
                                 <div style={{ padding: 6 }}>
@@ -62,7 +64,7 @@ const MissingLicense = () => {
                             </div>
                         );
                     }}
-                />
+                /> */}
             </IonCardContent>
         </IonCard>
 

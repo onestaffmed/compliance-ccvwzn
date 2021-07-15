@@ -19,32 +19,35 @@ import LicenseLoad from "../pages/profileBuilder/licenses/licenseLoad";
 const LicenseTest: React.FC = () => {
 
     return (
-        <IonPage>
-            <Header />
 
-            <IonContent fullscreen className="ion-padding">
-                <div className="profileContainer">
-                    <IonToolbar><IonHeader><IonTitle color="primary">Licenses</IonTitle></IonHeader></IonToolbar>
+        <div className="backgroundColor">
+            <IonPage>
+                <Header />
 
-                    <IonGrid>
-                        <IonRow>
-                            <IonCol>
-                                <ExpiringLicense />
-                            </IonCol>
-                            <IonCol>
-                                <MissingLicense />
-                            </IonCol>
-                        </IonRow>
-                        <IonRow>
-                            <IonCol>
-                                <ActiveLicense />
-                            </IonCol>
-                        </IonRow>
-                    </IonGrid>
-                    <LicenseLoad />
-                </div>
-            </IonContent>
-        </IonPage>
+                <IonContent fullscreen className="ion-padding">
+                    <div className="profileContainer">
+                        <IonHeader><IonTitle className="documentHeader">Licenses</IonTitle></IonHeader>
+
+                        <IonGrid>
+                            <IonRow>
+                                <IonCol>
+                                    <ExpiringLicense />
+                                </IonCol>
+                                <IonCol>
+                                    <MissingLicense />
+                                </IonCol>
+                            </IonRow>
+                            <IonRow>
+                                <IonCol>
+                                    <ActiveLicense />
+                                </IonCol>
+                            </IonRow>
+                        </IonGrid>
+                        <LicenseLoad />
+                    </div>
+                </IonContent>
+            </IonPage>
+        </div>
     );
 };
 

@@ -13,13 +13,13 @@ import {
 } from "@ionic/react";
 
 import MyAccordion from "../../../components/accordian";
-import { getAllLicenses } from '../../../utils/api';
+import { allExpiredLicenses } from '../../../utils/api';
 
 const ExpiringLicense = () => {
     const [licenses, setLicense] = useState([]);
 
     useEffect(() => {
-        getAllLicenses()
+        allExpiredLicenses()
             .then(({ data: licenses }) => setLicense(licenses))
             .catch((err) => console.log(err));
     }, []);

@@ -14,6 +14,9 @@ import ExpiringImm from "../pages/profileBuilder/medicalHistory/immunizations/ex
 import MissingImm from "../pages/profileBuilder/medicalHistory/immunizations/missingImm";
 import ActiveImm from "../pages/profileBuilder/medicalHistory/immunizations/activeImm";
 import UserReferences from "../pages/profileBuilder/references/references";
+import ExpiringCerts from "../pages/profileBuilder/certifications/expiringCerts";
+import MissingCerts from "../pages/profileBuilder/certifications/missingCerts";
+import ActiveCerts from "../pages/profileBuilder/certifications/activeCerts";
 
 
 const UserProfile = () => {
@@ -213,42 +216,14 @@ const UserProfile = () => {
                                 </IonCardTitle>
                             </IonCardHeader>
                             <IonCardContent>
-                                <MyAccordion
-                                    list={data}
-                                    renderHeader={(item) => {
-                                        return (
-                                            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                                {item.name.first} {item.name.last}
-                                            </span>
-                                        );
-                                    }}
-                                    renderPanel={(item) => {
-                                        return (
-                                            <div>
-                                                <IonItem style={{ "--padding-start": 0 }}>
+                                <IonGrid>
+                                    <IonRow>
+                                        <IonCol><ExpiringCerts /></IonCol>
+                                        <IonCol><MissingCerts /></IonCol>
+                                    </IonRow>
+                                    <IonRow><IonCol><ActiveCerts /></IonCol></IonRow>
 
-                                                    <IonLabel>
-                                                        <div>
-                                                            {" "}
-                                                            {item.location.city} {item.location.state}
-                                                        </div>
-                                                        <div> {item.location.country}</div>
-                                                        {/* <div className="ion-text-wrap">{item.body}</div> */}
-                                                    </IonLabel>
-                                                </IonItem>
-                                                <div style={{ padding: 6 }}>
-                                                    <IonButton
-                                                        className="ion-float-right"
-                                                        style={{ zoom: 0.9, color: 'white' }}
-                                                        onClick={() => alert("Item Clicked " + item.email)}
-                                                    >
-                                                        VIEW
-                                                    </IonButton>
-                                                </div>
-                                            </div>
-                                        );
-                                    }}
-                                />
+                                </IonGrid>
                             </IonCardContent>
                         </IonCard>
 

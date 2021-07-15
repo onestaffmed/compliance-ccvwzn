@@ -19,7 +19,7 @@ const ActiveLicense = () => {
 
     useEffect(() => {
         getAllLicenses()
-            .then(({ data: licenses }) => setLicense(licenses))
+            .then(({ data: activelicenses }) => setLicense(activelicenses))
             .catch((err) => console.log(err));
     }, []);
 
@@ -39,7 +39,7 @@ const ActiveLicense = () => {
                             );
                         }}
                         renderPanel={(item) => {
-                            const dateFix = item.expiration.split('T')[0].split('-').reverse().join('/');
+                            const dateFix = item.expiration.split('T')[0].split('-').join('/');
                             return (
                                 <div>
                                     <IonItem style={{ "--padding-start": 0 }}>

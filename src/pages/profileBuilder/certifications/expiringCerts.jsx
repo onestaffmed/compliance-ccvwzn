@@ -28,7 +28,9 @@ const ExpiringCerts = () => {
 
             <IonCard className="cardPrimary" ><IonCardTitle className="ion-padding" color="warning">Expiring</IonCardTitle>
                 <IonCardContent>
-                    <MyAccordion
+
+                    <div>None Found</div>
+                    {/* <MyAccordion
                         list={certification}
                         renderHeader={(item) => {
                             return (
@@ -49,7 +51,7 @@ const ExpiringCerts = () => {
                                                 Expiration: {dateFix}
                                             </div>
 
-                                            {/* <div className="ion-text-wrap">{item.body}</div> */}
+                                            
                                         </IonLabel>
                                     </IonItem>
                                     <div style={{ padding: 6 }}>
@@ -64,7 +66,7 @@ const ExpiringCerts = () => {
                                 </div>
                             );
                         }}
-                    />
+                    /> */}
                 </IonCardContent>
             </IonCard>
         </>
