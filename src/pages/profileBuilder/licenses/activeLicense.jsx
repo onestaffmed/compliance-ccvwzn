@@ -8,7 +8,7 @@ import {
     IonCardContent,
 
 } from "@ionic/react";
-
+import { Link } from 'react-router-dom';
 import MyAccordion from "../../../components/accordian";
 import { getAllLicenses } from '../../../utils/api';
 // import LicenseLoad from './licenseLoad';
@@ -27,6 +27,7 @@ const ActiveLicense = () => {
             <IonCard className="cardPrimary" ><IonCardTitle className="ion-padding" color="success">Active</IonCardTitle>
                 <IonCardContent>
                     <MyAccordion
+
                         list={licenses}
                         renderHeader={(item) => {
                             return (
@@ -50,13 +51,14 @@ const ActiveLicense = () => {
                                         </IonLabel>
                                     </IonItem>
                                     <div style={{ padding: 6 }}>
-                                        <IonButton
-                                            className="ion-float-right"
-                                            style={{ zoom: 0.9 }}
-                                            href='/licensetest'
-                                        >
-                                            EDIT
-                                        </IonButton>
+                                        <Link to={`/editlicense/${item.id}`}>
+                                            <IonButton
+                                                className="ion-float-right"
+                                                style={{ zoom: 0.9 }}
+
+                                            >
+                                                EDIT
+                                            </IonButton></Link>
                                     </div>
                                 </div>
                             );

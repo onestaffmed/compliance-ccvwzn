@@ -30,6 +30,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './index.css';
+import LicenseEditor from './pages/profileBuilder/licenses/licenseEditor';
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
             <Route path="/education" component={AllEducation} exact={true} />
             <Route path="/medicalhistory" component={AllMedicalHistory} exact={true} />
             <Route path="/certifications" component={AllCerts} exact={true} />
+            <Route path="/editlicense" component={LicenseEditor} exact={true} />
 
           </IonRouterOutlet>
         </IonSplitPane>

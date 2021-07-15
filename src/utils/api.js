@@ -12,7 +12,7 @@ export const getUserProfile =() => {
 // const userLicenses = ` http://localhost:3000/licenses`;
 
 // ** Demo API
-const userLicenses = ` http://10.0.0.127:3000/licenses`;
+const userLicenses = ` http://10.103.0.98:3000/licenses`;
 
 export const getAllLicenses =() => {
     return axios.get(userLicenses);
@@ -43,6 +43,11 @@ const userCerts = `http://10.0.0.127:3000/certifications`;
 export const getAllCerts =() => {
     return axios.get(userCerts);
     
+};
+
+const loadLicense = `http://10.103.0.98:3000/licenses`;
+export const masterLicenses = () => {
+    return axios.get(loadLicense);
 };
 
 

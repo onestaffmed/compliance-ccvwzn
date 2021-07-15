@@ -55,7 +55,7 @@ const ExpiringLicense = () => {
                                         <IonButton
                                             className="ion-float-right"
                                             style={{ zoom: 0.9 }}
-                                            href='/licensetest'
+                                            href='/editlicense'
                                         >
                                             EDIT
                                         </IonButton>
