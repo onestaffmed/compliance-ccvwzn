@@ -16,17 +16,20 @@ import { getAllLicenses } from '../../../utils/api';
 const ActiveLicense = () => {
     const [licenses, setLicense] = useState([]);
 
+
     useEffect(() => {
         getAllLicenses()
             .then(({ data: licenses }) => setLicense(licenses))
             .catch((err) => console.log(err));
     }, []);
 
+
     return (
         <>
             <IonCard className="cardPrimary" ><IonCardTitle className="ion-padding" color="success">Active</IonCardTitle>
                 <IonCardContent>
                     <MyAccordion
+
                         list={licenses}
                         renderHeader={(item) => {
                             return (
@@ -36,6 +39,7 @@ const ActiveLicense = () => {
                             );
                         }}
                         renderPanel={(item) => {
+                            const dateFix = item.expiration.split('T')[0].split('-').reverse().join('/');
                             return (
                                 <div>
                                     <IonItem style={{ "--padding-start": 0 }}>
@@ -43,8 +47,9 @@ const ActiveLicense = () => {
                                         <IonLabel>
                                             <div>
                                                 {" "}
-                                                Expiration: {item.expiration}
+                                                Expiration: {dateFix}
                                             </div>
+
                                             <div> Is Compact? {item.compact}</div>
                                             {/* <div className="ion-text-wrap">{item.body}</div> */}
                                         </IonLabel>

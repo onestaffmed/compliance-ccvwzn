@@ -27,11 +27,14 @@ const LicenseLoad = () => {
         'compact': '',
     })
 
+    const minDate = new Date(new Date().setDate(new Date().getDate() + 10)).toISOString();
+
+
     // const [stateErr, setStateErr] = useState({});
     // const [authorErr, setAuthorErr] = useState({});
     // const loadLicense = `http://345vy.mocklab.io/licenses`;
     // const loadLicense = ` http://localhost:3000/licenses`;
-    const loadLicense = ` http://10.0.0.127:3000/licenses`;
+    const loadLicense = ` http://10.103.0.98:3000/licenses`;
 
 
     const submit = (e) => {
@@ -142,10 +145,11 @@ const LicenseLoad = () => {
                         </IonItem>
 
                         <IonItem>
-                            <IonLabel htmlFor="type" position="floating"> Type </IonLabel> <IonInput
+                            <IonLabel htmlFor="type" className="ion-padding-end"> Type </IonLabel> <IonInput
                                 type="text"
                                 id="type"
                                 name="type"
+                                placeholder="Add License Type"
                                 value={licenseData.type}
                                 onIonChange={e => setLicenseData({ ...licenseData, type: e.target.value })} />
                         </IonItem>
@@ -158,18 +162,18 @@ const LicenseLoad = () => {
                                 value={licenseData.compact}
                                 onIonChange={e => setLicenseData({ ...licenseData, compact: e.target.value })}>
                                 <IonItem lines="none">
-                                    <IonLabel>Yes  </IonLabel>
+                                    <IonLabel className="ion-padding-end">Yes  </IonLabel>
                                     <IonRadio value="yes" />
                                 </IonItem>
                                 <IonItem lines="none">
-                                    <IonLabel>No  </IonLabel>
+                                    <IonLabel className="ion-padding-end">No  </IonLabel>
                                     <IonRadio value="no" />
                                 </IonItem>
                             </IonRadioGroup>
                         </IonItem>
 
-                        <IonItem>
-                            <IonLabel htmlFor="expiration" position="floating">Expiration Date</IonLabel> <span><IonDatetime displayFormat=" MMM DD YYYY" placeholder="Select Date" value={licenseData.expiration} onIonChange={e => setLicenseData({ ...licenseData, expiration: e.target.value })}
+                        <IonItem lines="none">
+                            <IonLabel htmlFor="expiration" position="floating">Expiration Date</IonLabel> <span><IonDatetime overflow-scroll="true" displayFormat=" MMM DD YYYY" min={minDate} max="2050" placeholder=" Select Date" value={licenseData.expiration} onIonChange={e => setLicenseData({ ...licenseData, expiration: e.target.value })}
                                 id="expiration"
                                 name="expiration"
                             // value={licenseData.expiration}

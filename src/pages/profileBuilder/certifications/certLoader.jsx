@@ -23,7 +23,7 @@ const CertLoad = () => {
     // const [authorErr, setAuthorErr] = useState({});
     // const loadLicense = `http://345vy.mocklab.io/licenses`;
     // const loadLicense = ` http://localhost:3000/certifications`;
-    const loadLicense = ` http://10.0.0.127:3000/certifications`;
+    const loadLicense = ` http://10.103.0.98:3000/certifications`;
 
     const submit = (e) => {
         e.preventDefault()

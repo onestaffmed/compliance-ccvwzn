@@ -38,6 +38,7 @@ const MissingCerts = () => {
                             );
                         }}
                         renderPanel={(item) => {
+                            const dateFix = item.expiration.split('T')[0].split('-').reverse().join('/');
                             return (
                                 <div>
                                     <IonItem style={{ "--padding-start": 0 }}>
@@ -45,7 +46,7 @@ const MissingCerts = () => {
                                         <IonLabel>
                                             <div>
                                                 {" "}
-                                                Expiration: {item.expiration}
+                                                Expiration: {dateFix}
                                             </div>
 
                                             {/* <div className="ion-text-wrap">{item.body}</div> */}
