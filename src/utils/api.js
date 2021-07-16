@@ -25,9 +25,13 @@ export const getAllLicenses =() => {
 // const userEducation = `http://localhost:3000/education`;
 
 // ** Demo API
-const userEducation = `http://10.103.0.98:3000/education`;
-
-
+// const userEducation = `http://10.103.0.98:3000/education`;
+// export const getAllEdu =() => {
+//     return axios.get(userEducation);
+    
+// };
+// ** Public Demo
+const userEducation = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/education`;
 export const getAllEdu =() => {
     return axios.get(userEducation);
     
@@ -39,27 +43,49 @@ export const getAllEdu =() => {
 // const userCerts = `http://localhost:3000/certifications`;\
 
 // ** Demo API
-const userCerts = `http://10.103.0.98:3000/activecertifications`;
-export const getAllCerts =() => {
-    return axios.get(userCerts);
+// const userCerts = `http://10.103.0.98:3000/activecertifications`;
+// export const getAllCerts =() => {
+//     return axios.get(userCerts);
     
-};
+// };
+
+
 // ** Demo API
-const missingCerts = `http://10.103.0.98:3000/missingcertifications`;
+// const missingCerts = `http://10.103.0.98:3000/missingcertifications`;
+// export const getAllMissingCerts =() => {
+//     return axios.get(missingCerts);
+    
+// };
+// ** Public Demo API
+const missingCerts = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/missingCertifications`;
 export const getAllMissingCerts =() => {
     return axios.get(missingCerts);
     
 };
-
-const loadLicense = `http://10.103.0.98:3000/activelicenses`;
+const loadLicense = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/activelicenses`;
 export const masterLicenses = () => {
     return axios.get(loadLicense);
 };
-
-const expiredLicense = `http://10.103.0.98:3000/expiredlicenses`;
+const expiredLicense = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/expiredlicenses`;
 export const allExpiredLicenses = () => {
     return axios.get(expiredLicense);
 };
+
+const userCerts = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/activeCertifications`;
+export const getAllCerts =() => {
+    return axios.get(userCerts);
+    
+};
+// const loadLicense = `http://10.103.0.98:3000/activelicenses`;
+// export const masterLicenses = () => {
+//     return axios.get(loadLicense);
+// };
+
+
+// const expiredLicense = `http://10.103.0.98:3000/expiredlicenses`;
+// export const allExpiredLicenses = () => {
+//     return axios.get(expiredLicense);
+// };
 
 
 // export const updateUserProfile =() => {

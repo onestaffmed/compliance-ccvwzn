@@ -23,7 +23,8 @@ const CertLoad = () => {
     // const [authorErr, setAuthorErr] = useState({});
     // const loadLicense = `http://345vy.mocklab.io/licenses`;
     // const loadLicense = ` http://localhost:3000/certifications`;
-    const loadLicense = ` http://10.103.0.98:3000/certifications`;
+    // const loadLicense = ` http://10.103.0.98:3000/certifications`;
+    const loadLicense = ` https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/activeCertifications`;
 
     const submit = (e) => {
         e.preventDefault()
