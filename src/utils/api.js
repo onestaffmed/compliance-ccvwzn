@@ -12,12 +12,12 @@ export const getUserProfile =() => {
 // const userLicenses = ` http://localhost:3000/licenses`;
 
 // ** Demo API
-const userLicenses = ` http://10.103.0.98:3000/activelicenses`;
+// const userLicenses = ` http://10.103.0.98:3000/activelicenses`;
 
-export const getAllLicenses =() => {
-    return axios.get(userLicenses);
+// export const getAllLicenses =() => {
+//     return axios.get(userLicenses);
     
-};
+// };
 //** Mock Server API
 // const userEducation = `http://345vy.mocklab.io/education`;
 
@@ -30,12 +30,7 @@ export const getAllLicenses =() => {
 //     return axios.get(userEducation);
     
 // };
-// ** Public Demo
-const userEducation = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/education`;
-export const getAllEdu =() => {
-    return axios.get(userEducation);
-    
-};
+
 //** Mock Server API
 // const userCerts = `http://345vy.mocklab.io/certifications`;
 
@@ -57,6 +52,12 @@ export const getAllEdu =() => {
     
 // };
 // ** Public Demo API
+
+const userEducation = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/education`;
+export const getAllEdu =() => {
+    return axios.get(userEducation);
+    
+};
 const missingCerts = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/missingCertifications`;
 export const getAllMissingCerts =() => {
     return axios.get(missingCerts);
@@ -65,6 +66,13 @@ export const getAllMissingCerts =() => {
 const loadLicense = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/activelicenses`;
 export const masterLicenses = () => {
     return axios.get(loadLicense);
+};
+
+const userLicenses = ` https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/activelicenses`;
+
+export const getAllLicenses =() => {
+    return axios.get(userLicenses);
+    
 };
 const expiredLicense = `https://my-json-server.typicode.com/onestaffmed/compliance-ccvwzn/expiredlicenses`;
 export const allExpiredLicenses = () => {
