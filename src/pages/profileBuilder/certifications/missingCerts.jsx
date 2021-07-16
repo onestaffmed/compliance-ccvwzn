@@ -6,6 +6,7 @@ import {
     IonCard,
     IonCardTitle,
     IonCardContent,
+    IonChip
 
 } from "@ionic/react";
 
@@ -32,9 +33,13 @@ const MissingCerts = () => {
                         list={certification}
                         renderHeader={(item) => {
                             return (
-                                <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                    Certification: {item.certification}
-                                </span>
+                                <><IonChip color="warning">
+                                    <IonLabel>Pending Verification</IonLabel>
+                                </IonChip>
+                                    <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+                                        Certification: {item.certification}
+                                    </span>
+                                </>
                             );
                         }}
                         renderPanel={(item) => {

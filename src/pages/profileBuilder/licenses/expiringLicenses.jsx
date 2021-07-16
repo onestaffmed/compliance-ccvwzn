@@ -4,7 +4,7 @@ import {
     IonButton,
     IonItem,
     IonLabel,
-
+    IonChip,
     IonCard,
     IonCardTitle,
     IonCardContent,
@@ -32,9 +32,16 @@ const ExpiringLicense = () => {
                         list={licenses}
                         renderHeader={(item) => {
                             return (
-                                <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
-                                    {item.state} <br /> {item.type}
-                                </span>
+                                <>
+                                    <IonChip color="danger">
+                                        <IonLabel>Expired</IonLabel>
+                                    </IonChip>
+                                    <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+
+                                        {item.state} <br /> {item.type}
+
+                                    </span>
+                                </>
                             );
                         }}
                         renderPanel={(item) => {
