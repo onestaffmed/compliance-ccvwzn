@@ -1,0 +1,60 @@
+{
+    "expiredlicenses": [{
+        "id": 1,
+        "type": "Registered Nurse",
+        "state": "California",
+        "compact": "No",
+        "expiration": "2022-10-31"
+    }],
+    "activelicenses": [{
+            "id": 2,
+            "type": "Registered Nurse",
+            "state": "Ohio",
+            "compact": "No",
+            "expiration": "2022-10-31"
+        },
+        {
+            "type": "LPN",
+            "state": "Nebraska",
+            "expiration": "2021-12-31",
+            "compact": "No",
+            "id": 3
+        }
+    ],
+    "education": [{
+            "id": 1,
+            "school": "UNMC",
+            "state": "Nebraska",
+            "city": "Omaha",
+            "degree": "Bachelor of Science",
+            "study": "Nursing"
+        },
+        {
+            "id": 2,
+            "school": "Iowa Western CC",
+            "state": "Iowa",
+            "city": "Council Bluffs",
+            "degree": "Associate",
+            "study": "Nursng"
+        }
+    ],
+    "missingCertifications": [{
+        "certification": "PALS",
+        "expiration": "2021-11-24T15:49:31.670-06:00",
+        "id": 6
+    }],
+    "activeCertifications": [
+
+        {
+            "certification": "CPR",
+            "expiration": "2021-07-14T14:18:49.692-05:00",
+            "type": "",
+            "id": 4
+        },
+        {
+            "certification": "BLS",
+            "expiration": "2021-12-31T15:48:33.691-06:00",
+            "id": 5
+        }
+    ]
+}
