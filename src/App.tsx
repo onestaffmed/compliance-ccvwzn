@@ -34,7 +34,7 @@ import './index.css';
 const App = () => {
   return (
     <IonApp>
-      <IonReactRouter>
+      <IonReactRouter basename={process.env.PUBLIC_URL}>
         <IonSplitPane when="(max-width:40px)" contentId="main" >
           <Menu />
           <IonRouterOutlet id="main">

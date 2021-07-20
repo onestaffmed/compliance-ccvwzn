@@ -1,6 +1,7 @@
 {
   "name": "compliance",
   "version": "0.0.1",
+  "homepage": "https://samanthagunn.github.io/complianceproject/",
   "private": true,
   "dependencies": {
     "@capacitor/android": "^3.1.1",
@@ -31,6 +32,7 @@
     "@types/react-router-dom": "^5.1.7",
     "axios": "^0.21.1",
     "faker": "^5.5.3",
+    "gh-pages": "^3.2.3",
     "ionicons": "^5.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -55,6 +57,8 @@
   "scripts": {
     "start": "react-scripts start & json-server --watch src/licenses.json",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
